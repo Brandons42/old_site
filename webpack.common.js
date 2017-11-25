@@ -7,7 +7,7 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: {
-    index: path.resolve(__dirname, 'js/index.js')
+    index: path.resolve(__dirname, 'scripts/index.js')
   },
   module: {
     rules: [
@@ -20,7 +20,16 @@ module.exports = {
         })
       },
       {
+        enforce: 'pre',
         test: /\.js$/,
+        exclude: /^node_modules$/,
+        loader: 'eslint-loader',
+        options: {
+          eslintPath: path.resolve(__dirname, '.eslintrc.json')
+        }
+      },
+      {
+        test: /\.jsx?$/,
         exclude: /^node_modules$/,
         loader: 'babel-loader'
       },
@@ -35,7 +44,7 @@ module.exports = {
         use: ['file-loader']
       },
       {
-        test: /(template|\.(woff|woff2|eot|ttf|otf))$/,
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
         exclude: /^node_modules$/,
         use: ['file-loader']
       }
