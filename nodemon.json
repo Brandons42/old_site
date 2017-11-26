@@ -1,0 +1,12 @@
+{
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "exec": "webpack-dev-server --config webpack.dev.js",
+  "ignoreRoot": false,
+  "watch": [
+    "./.eslintrc.json",
+    "./webpack.common.js",
+    "./webpack.dev.js"
+  ]
+}
