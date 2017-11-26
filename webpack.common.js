@@ -9,10 +9,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    index: path.resolve(__dirname, 'scripts/index.js'),
-    vendor: [
-      'react'
-    ]
+    index: path.resolve(__dirname, 'scripts/index.js')
   },
   module: {
     rules: [
@@ -48,7 +45,8 @@ module.exports = {
       template: 'index.pug'
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor'
+      name: 'vendor',
+      minChunks: ({ resource }) => /node_modules/.test(resource)
     }),
     new webpack.optimize.ModuleConcatenationPlugin()
   ]
