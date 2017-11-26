@@ -1,65 +1,55 @@
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
 
+const BabelMinifyPlugin = require('babel-minify-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CommonShakePlugin = require('webpack-common-shake').Plugin;
+const CompressionPlugin = require("compression-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    index: path.resolve(__dirname, 'scripts/index.js')
+    index: path.resolve(__dirname, 'scripts/index.js'),
+    vendor: [
+      'react'
+    ]
   },
   module: {
     rules: [
       {
-        test: /\.sass$/,
-        exclude: /^node_modules$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: ['css-loader', 'sass-loader']
-        })
-      },
-      {
         enforce: 'pre',
-        test: /\.jsx?$/,
         exclude: /^node_modules$/,
         loader: 'eslint-loader',
         options: {
           eslintPath: path.resolve(__dirname, '.eslintrc.json')
-        }
+        },
+        test: /\.jsx?$/
       },
       {
-        test: /\.jsx?$/,
         exclude: /^node_modules$/,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
+        test: /\.jsx?$/
       },
       {
-        test: /\.pug$/,
         exclude: /^node_modules$/,
-        loader: 'pug-loader'
-      },
-      {
-        test: /\.(png|svg|jpg|gif)$/,
-        exclude: /^node_modules$/,
-        use: ['file-loader']
-      },
-      {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
-        exclude: /^node_modules$/,
-        use: ['file-loader']
+        loader: 'pug-loader',
+        test: /\.pug$/
       }
     ]
   },
   plugins: [
+    new BabelMinifyPlugin({}, {
+      test: /\.jsx?$/
+    }),
     new CleanWebpackPlugin(['./dist']),
-    new ExtractTextPlugin('[name].css'),
+    new CommonShakePlugin(),
+    new CompressionPlugin(),
     new HtmlWebpackPlugin({
       template: 'index.pug'
     }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor'
+    }),
     new webpack.optimize.ModuleConcatenationPlugin()
-  ],
-  output: {
-    filename: '[name].js',
-    path: path.resolve(__dirname, 'dist')
-  }
+  ]
 };

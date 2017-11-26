@@ -1,3 +1,12 @@
 {
-  "presets": ["env", "react"]
+  "plugins": [
+    "preval",
+    ["transform-imports", {
+
+    }]
+  ],
+  "presets": [
+    "env",
+    "react"
+  ]
 }
