@@ -79,13 +79,13 @@ module.exports = merge(common, {
       allChunks: true,
       filename: '[name].css'
     }),
+    new OptimizeJsPlugin({
+      sourceMap: true
+    }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development')
     }),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin(),
-    new OptimizeJsPlugin({
-      sourceMap: true
-    })
+    new webpack.NamedModulesPlugin()
   ]
 });

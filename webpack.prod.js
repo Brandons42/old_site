@@ -1,5 +1,6 @@
 const common = require('./webpack.common.js');
 const merge = require('webpack-merge');
+const path = require('path');
 const webpack = require('webpack');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -54,11 +55,11 @@ module.exports = merge(common, {
   output: {
     filename: '[name].[chunkhash:8].js',
     path: path.resolve(__dirname, 'dist')
-  }
+  },
   plugins: [
     new ExtractTextPlugin({
       allChunks: true,
-      filename: '[name].[contenhash:8].css'
+      filename: '[name].[contenthash:8].css'
     }),
     new OptimizeJsPlugin({
       sourceMap: false
