@@ -38,7 +38,7 @@
   },
   "scripts": {
     "build": "webpack --config webpack.prod.js",
-    "edit-dev": "nodemon --config nodemon.edit.json",
+    "edit": "nodemon --config nodemon.edit.json",
     "start": "nodemon --config nodemon.start.json"
   },
   "dependencies": {

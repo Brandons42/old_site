@@ -9,7 +9,7 @@ const OptimizeJsPlugin = require("optimize-js-plugin");
 module.exports = merge(common, {
   devServer: {
     compress: true,
-    contentBase: path.resolve(__dirname, 'dist'),
+    contentBase: path.join(__dirname, 'dist'),
     hot: true,
     open: true
   },
@@ -72,7 +72,7 @@ module.exports = merge(common, {
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.join(__dirname, 'dist')
   },
   plugins: [
     new ExtractTextPlugin({

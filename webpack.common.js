@@ -9,7 +9,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    index: path.resolve(__dirname, 'components/app.jsx')
+    components: path.join(__dirname, 'components/app.jsx')
   },
   module: {
     rules: [
@@ -18,7 +18,7 @@ module.exports = {
         exclude: /^node_modules$/,
         loader: 'eslint-loader',
         options: {
-          eslintPath: path.resolve(__dirname, '.eslintrc.json')
+          eslintPath: path.join(__dirname, '.eslintrc.json')
         },
         test: /\.jsx?$/
       },*/
@@ -39,9 +39,10 @@ module.exports = {
       test: /\.jsx?$/
     }),
     new CleanWebpackPlugin(['./dist']),
-    //new CommonShakePlugin(),
+    new CommonShakePlugin(),
     //new CompressionPlugin(),
     new HtmlWebpackPlugin({
+      filename: 'index.html',
       template: './index.pug'
     }),
     new webpack.optimize.CommonsChunkPlugin({

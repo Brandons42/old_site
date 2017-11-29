@@ -1,7 +1,7 @@
 import React from 'react';
 
 import img from '../img/img.jpeg';
-//import '../styles/main.sass';
+require('../styles/main.sass');
 
 export default class Content extends React.Component {
   render() {

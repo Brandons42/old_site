@@ -2,13 +2,13 @@
   "env": {
     "NODE_ENV": "production"
   },
-  "exec": "build",
+  "exec": "yarn build",
   "ignoreRoot": false,
   "watch": [
     "./.babelrc",
     "./.eslintrc.json",
     "./postcss.config.js",
-    "./webpack.dev.js",
+    "./webpack.common.js",
     "./webpack.prod.js"
   ]
 }

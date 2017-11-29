@@ -54,7 +54,7 @@ module.exports = merge(common, {
   },
   output: {
     filename: '[name].[chunkhash:8].js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.join(__dirname, 'dist')
   },
   plugins: [
     new ExtractTextPlugin({
