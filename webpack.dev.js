@@ -3,7 +3,6 @@ const merge = require('webpack-merge');
 const path = require('path');
 const webpack = require('webpack');
 
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const OptimizeJsPlugin = require("optimize-js-plugin");
 
 module.exports = merge(common, {
@@ -18,32 +17,31 @@ module.exports = merge(common, {
     rules: [
       {
         exclude: /^node_modules$/,
+        fallback: 'style-loader',
         test: /\.sass$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                importLoaders: 2,
-                minimize: true,
-                sourceMap: true
-              }
-            },
-            {
-              loader: 'postcss-loader',
-              options: {
-                sourceMap: true
-              }
-            },
-            {
-              loader: 'sass-loader',
-              options: {
-                sourceMap: true
-              }
+        use: [
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 2,
+              minimize: true,
+              sourceMap: true
             }
-          ]
-        })
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            }
+          }
+        ]
+      }
       },
       {
         exclude: /^node_modules$/,
@@ -75,10 +73,6 @@ module.exports = merge(common, {
     path: path.join(__dirname, 'dist')
   },
   plugins: [
-    new ExtractTextPlugin({
-      allChunks: true,
-      filename: '[name].css'
-    }),
     new OptimizeJsPlugin({
       sourceMap: true
     }),

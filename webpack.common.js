@@ -45,10 +45,6 @@ module.exports = {
       filename: 'index.html',
       template: './index.pug'
     }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      minChunks: ({ resource }) => /node_modules/.test(resource)
-    }),
     new webpack.optimize.ModuleConcatenationPlugin()
   ]
 };
