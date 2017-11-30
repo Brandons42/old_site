@@ -68,12 +68,9 @@ module.exports = merge(common, {
       name: 'vendor',
       minChunks: ({ resource }) => /node_modules/.test(resource)
     }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'manifest',
-      minChunks: Infinity
-    }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
     })
-  ]
+  ],
+  recordsPath: path.join(__dirname, 'records.json')
 });

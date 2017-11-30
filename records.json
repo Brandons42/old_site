@@ -1,0 +1,101 @@
+{
+  "html-webpack-plugin for \"index.html\"": [
+    {
+      "modules": {
+        "byIdentifier": {
+          "node_modules/html-webpack-plugin/lib/loader.js!node_modules/pug-loader/index.js!index.pug": 0,
+          "node_modules/pug-runtime/index.js": 1,
+          "external \"fs\"": 2
+        },
+        "usedIds": {
+          "0": 0,
+          "1": 1,
+          "2": 2
+        }
+      },
+      "chunks": {
+        "byName": {},
+        "byBlocks": {},
+        "usedIds": {
+          "0": 0
+        }
+      }
+    }
+  ],
+  "extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js??ref--2-2!node_modules/postcss-loader/lib/index.js!node_modules/sass-loader/lib/loader.js!styles/main.sass": [
+    {
+      "modules": {
+        "byIdentifier": {
+          "node_modules/css-loader/index.js?{\"importLoaders\":2,\"minimize\":true}!node_modules/postcss-loader/lib/index.js!node_modules/sass-loader/lib/loader.js!styles/main.sass": 0,
+          "node_modules/babel-loader/lib/index.js!node_modules/css-loader/lib/css-base.js": 1
+        },
+        "usedIds": {
+          "0": 0,
+          "1": 1
+        }
+      },
+      "chunks": {
+        "byName": {},
+        "byBlocks": {},
+        "usedIds": {
+          "0": 0
+        }
+      }
+    }
+  ],
+  "modules": {
+    "byIdentifier": {
+      "node_modules/babel-loader/lib/index.js!node_modules/react/index.js": 0,
+      "node_modules/babel-loader/lib/index.js!node_modules/fbjs/lib/emptyFunction.js": 1,
+      "node_modules/babel-loader/lib/index.js!node_modules/object-assign/index.js": 2,
+      "node_modules/babel-loader/lib/index.js!node_modules/fbjs/lib/emptyObject.js": 3,
+      "node_modules/babel-loader/lib/index.js!components/app.jsx": 4,
+      "node_modules/babel-loader/lib/index.js!node_modules/react/cjs/react.production.min.js": 5,
+      "node_modules/babel-loader/lib/index.js!node_modules/react-dom/index.js": 6,
+      "node_modules/babel-loader/lib/index.js!node_modules/react-dom/cjs/react-dom.production.min.js": 7,
+      "node_modules/babel-loader/lib/index.js!node_modules/fbjs/lib/ExecutionEnvironment.js": 8,
+      "node_modules/babel-loader/lib/index.js!node_modules/fbjs/lib/EventListener.js": 9,
+      "node_modules/babel-loader/lib/index.js!node_modules/fbjs/lib/getActiveElement.js": 10,
+      "node_modules/babel-loader/lib/index.js!node_modules/fbjs/lib/shallowEqual.js": 11,
+      "node_modules/babel-loader/lib/index.js!node_modules/fbjs/lib/containsNode.js": 12,
+      "node_modules/babel-loader/lib/index.js!node_modules/fbjs/lib/isTextNode.js": 13,
+      "node_modules/babel-loader/lib/index.js!node_modules/fbjs/lib/isNode.js": 14,
+      "node_modules/babel-loader/lib/index.js!node_modules/fbjs/lib/focusNode.js": 15,
+      "node_modules/babel-loader/lib/index.js!components/content.jsx": 16,
+      "node_modules/file-loader/dist/cjs.js??ref--3-0!node_modules/image-webpack-loader/index.js!img/img.jpeg": 17,
+      "node_modules/extract-text-webpack-plugin/dist/loader.js??ref--2-0!node_modules/style-loader/index.js!node_modules/css-loader/index.js??ref--2-2!node_modules/postcss-loader/lib/index.js!node_modules/sass-loader/lib/loader.js!styles/main.sass": 18
+    },
+    "usedIds": {
+      "0": 0,
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5,
+      "6": 6,
+      "7": 7,
+      "8": 8,
+      "9": 9,
+      "10": 10,
+      "11": 11,
+      "12": 12,
+      "13": 13,
+      "14": 14,
+      "15": 15,
+      "16": 16,
+      "17": 17,
+      "18": 18
+    }
+  },
+  "chunks": {
+    "byName": {
+      "components": 0,
+      "vendor": 1
+    },
+    "byBlocks": {},
+    "usedIds": {
+      "0": 0,
+      "1": 1
+    }
+  }
+}
