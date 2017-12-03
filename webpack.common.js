@@ -4,7 +4,7 @@ const webpack = require('webpack');
 const BabelMinifyPlugin = require('babel-minify-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CommonShakePlugin = require('webpack-common-shake').Plugin;
-const CompressionPlugin = require("compression-webpack-plugin");
+const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -40,11 +40,16 @@ module.exports = {
     }),
     new CleanWebpackPlugin(['./dist']),
     new CommonShakePlugin(),
-    //new CompressionPlugin(),
+    new DuplicatePackageCheckerPlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './index.pug'
     }),
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        context: __dirname
+      }
+    })
     new webpack.optimize.ModuleConcatenationPlugin()
   ]
 };
