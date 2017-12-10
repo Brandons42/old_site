@@ -6,6 +6,7 @@ const BabelMinifyPlugin = require('babel-minify-webpack-plugin');
 const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OptimizeJsPlugin = require('optimize-js-plugin');
+const ResourceHintsWebpackPlugin = require('resource-hints-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -48,6 +49,7 @@ module.exports = {
       template: './index.pug'
     }),
     new OptimizeJsPlugin(),
+    new ResourceHintsWebpackPlugin(),
     new webpack.LoaderOptionsPlugin({
       options: {
         context: __dirname

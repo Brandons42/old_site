@@ -17,7 +17,11 @@
     "css-loader": "^0.28.7",
     "duplicate-package-checker-webpack-plugin": "^2.0.1",
     "eslint": "^4.11.0",
+    "eslint-config-airbnb": "^16.1.0",
     "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.5.1",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.5",
     "gulp": "^3.9.1",
@@ -28,13 +32,13 @@
     "postcss-loader": "^2.0.9",
     "pug": "^2.0.0-rc.4",
     "pug-loader": "^2.3.0",
+    "resource-hints-webpack-plugin": "^0.0.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.0",
     "webpack": "^3.8.1",
     "webpack-common-shake": "^1.5.3",
     "webpack-dev-server": "^2.9.4",
-    "webpack-merge": "^4.1.1",
-    "write-file-webpack-plugin": "^4.2.0"
+    "webpack-merge": "^4.1.1"
   },
   "scripts": {
     "start": "nodemon --config nodemon.start.json",
