@@ -37,9 +37,9 @@
     "write-file-webpack-plugin": "^4.2.0"
   },
   "scripts": {
+    "start": "nodemon --config nodemon.start.json",
     "build": "webpack --config webpack.prod.js --env production",
-    "edit": "nodemon --config nodemon.edit.json",
-    "start": "nodemon --config nodemon.start.json"
+    "edit": "nodemon --config nodemon.edit.json"
   },
   "dependencies": {
     "react": "^16.1.1",

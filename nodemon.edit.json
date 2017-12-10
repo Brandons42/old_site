@@ -5,10 +5,10 @@
   "exec": "yarn build",
   "ignoreRoot": false,
   "watch": [
-    "./.babelrc",
-    "./.eslintrc.json",
-    "./postcss.config.js",
-    "./webpack.common.js",
-    "./webpack.prod.js"
+    ".babelrc",
+    ".eslintrc.json",
+    "postcss.config.js",
+    "webpack.common.js",
+    "webpack.prod.js"
   ]
 }
