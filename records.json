@@ -218,11 +218,12 @@
       "components": 0,
       "vendor": 1,
       "app": 2,
-      "styles": 0
+      "styles": 0,
+      "common": 0
     },
     "byBlocks": {},
     "usedIds": {
-      "1": 1,
+      "0": 0,
       "2": 2
     }
   },

@@ -91,8 +91,8 @@ module.exports = merge(common, {
       threadPool: happyThreadPool
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor',
-      minChunks: ({ resource }) => /node_modules/.test(resource)
+      name: 'common',
+      minChunks: 2
     }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')

@@ -5,7 +5,7 @@ const webpack = require('webpack');
 
 const HappyPack = require('happypack');
 
-const happyThreadPool = HappyPack.ThreadPool({ size: 8 });
+const happyThreadPool = HappyPack.ThreadPool({ size: 4 });
 
 module.exports = merge(common, {
   devServer: {
