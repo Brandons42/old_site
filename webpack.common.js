@@ -2,14 +2,17 @@ const path = require('path');
 const webpack = require('webpack');
 
 const BabelMinifyPlugin = require('babel-minify-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const CommonShakePlugin = require('webpack-common-shake').Plugin;
+//const CommonShakePlugin = require('webpack-common-shake').Plugin;
 const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const OptimizeJsPlugin = require('optimize-js-plugin');
 
 module.exports = {
   entry: {
-    components: path.join(__dirname, 'components/app.jsx')
+    app: [
+      path.join(__dirname, 'jsx/app.jsx'),
+      path.join(__dirname, 'js/styles.js')
+    ]
   },
   module: {
     rules: [
@@ -38,18 +41,18 @@ module.exports = {
     new BabelMinifyPlugin({}, {
       test: /\.jsx?$/
     }),
-    new CleanWebpackPlugin(['./dist']),
-    new CommonShakePlugin(),
+    //new CommonShakePlugin(),
     new DuplicatePackageCheckerPlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './index.pug'
     }),
+    new OptimizeJsPlugin(),
     new webpack.LoaderOptionsPlugin({
       options: {
         context: __dirname
       }
-    })
-    new webpack.optimize.ModuleConcatenationPlugin()
+    }),
+    new webpack.optimize.ModuleConcatenationPlugin(),
   ]
 };

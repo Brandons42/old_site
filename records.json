@@ -17,7 +17,7 @@
         "byName": {},
         "byBlocks": {},
         "usedIds": {
-          "0": 0
+          "1": 1
         }
       }
     }
@@ -63,7 +63,12 @@
       "node_modules/babel-loader/lib/index.js!node_modules/fbjs/lib/focusNode.js": 15,
       "node_modules/babel-loader/lib/index.js!components/content.jsx": 16,
       "node_modules/file-loader/dist/cjs.js??ref--3-0!node_modules/image-webpack-loader/index.js!img/img.jpeg": 17,
-      "node_modules/extract-text-webpack-plugin/dist/loader.js??ref--2-0!node_modules/style-loader/index.js!node_modules/css-loader/index.js??ref--2-2!node_modules/postcss-loader/lib/index.js!node_modules/sass-loader/lib/loader.js!styles/main.sass": 18
+      "node_modules/extract-text-webpack-plugin/dist/loader.js??ref--2-0!node_modules/style-loader/index.js!node_modules/css-loader/index.js??ref--2-2!node_modules/postcss-loader/lib/index.js!node_modules/sass-loader/lib/loader.js!styles/main.sass": 18,
+      "node_modules/babel-loader/lib/index.js!jsx/app.jsx": 19,
+      "node_modules/babel-loader/lib/index.js!jsx/content.jsx": 20,
+      "node_modules/babel-loader/lib/index.js!js/styles.js": 21,
+      "node_modules/extract-text-webpack-plugin/dist/loader.js??ref--2-0!node_modules/style-loader/index.js!node_modules/css-loader/index.js??ref--2-2!node_modules/postcss-loader/lib/index.js!node_modules/sass-loader/lib/loader.js!sass-global/main.sass": 22,
+      "multi jsx/app.jsx js/styles.js": 23
     },
     "usedIds": {
       "0": 0,
@@ -84,18 +89,63 @@
       "15": 15,
       "16": 16,
       "17": 17,
-      "18": 18
+      "18": 18,
+      "19": 19,
+      "20": 20,
+      "21": 21,
+      "22": 22,
+      "23": 23
     }
   },
   "chunks": {
     "byName": {
       "components": 0,
-      "vendor": 1
+      "vendor": 1,
+      "app": 2,
+      "styles": 0
     },
     "byBlocks": {},
     "usedIds": {
-      "0": 0,
-      "1": 1
+      "1": 1,
+      "2": 2
     }
-  }
+  },
+  "extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js??ref--2-2!node_modules/postcss-loader/lib/index.js!node_modules/sass-loader/lib/loader.js!sass-global/main.sass": [
+    {
+      "modules": {
+        "byIdentifier": {
+          "node_modules/css-loader/index.js?{\"importLoaders\":2,\"minimize\":true}!node_modules/postcss-loader/lib/index.js!node_modules/sass-loader/lib/loader.js!sass-global/main.sass": 0,
+          "node_modules/babel-loader/lib/index.js!node_modules/css-loader/lib/css-base.js": 1
+        },
+        "usedIds": {
+          "0": 0,
+          "1": 1
+        }
+      },
+      "chunks": {
+        "byName": {},
+        "byBlocks": {},
+        "usedIds": {
+          "1": 1
+        }
+      }
+    },
+    {
+      "modules": {
+        "byIdentifier": {
+          "node_modules/css-loader/index.js?{\"importLoaders\":2,\"minimize\":true}!node_modules/postcss-loader/lib/index.js!node_modules/sass-loader/lib/loader.js!sass-global/main.sass": 0
+        },
+        "usedIds": {
+          "0": 0
+        }
+      },
+      "chunks": {
+        "byName": {},
+        "byBlocks": {},
+        "usedIds": {
+          "0": 0
+        }
+      }
+    }
+  ]
 }

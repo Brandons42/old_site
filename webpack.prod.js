@@ -3,8 +3,8 @@ const merge = require('webpack-merge');
 const path = require('path');
 const webpack = require('webpack');
 
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const OptimizeJsPlugin = require("optimize-js-plugin");
 
 module.exports = merge(common, {
   module: {
@@ -53,16 +53,14 @@ module.exports = merge(common, {
     ]
   },
   output: {
-    filename: '[name].[chunkhash:8].js',
+    filename: 'js/[name].[chunkhash:8].js',
     path: path.join(__dirname, 'dist')
   },
   plugins: [
+    new CleanWebpackPlugin(['./dist/**/*']),
     new ExtractTextPlugin({
       allChunks: true,
-      filename: '[name].[contenthash:8].css'
-    }),
-    new OptimizeJsPlugin({
-      sourceMap: false
+      filename: 'css/[name].[contenthash:8].css'
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',

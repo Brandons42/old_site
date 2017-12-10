@@ -3,45 +3,30 @@ const merge = require('webpack-merge');
 const path = require('path');
 const webpack = require('webpack');
 
-const OptimizeJsPlugin = require("optimize-js-plugin");
-
 module.exports = merge(common, {
   devServer: {
     compress: true,
-    contentBase: path.join(__dirname, 'dist'),
-    hot: true,
-    open: true
+    open: true,
+    hot: true
   },
-  devtool: 'eval-source-map',
+  //devtool: 'cheap-eval-source-map',
   module: {
     rules: [
       {
         exclude: /^node_modules$/,
-        fallback: 'style-loader',
         test: /\.sass$/,
         use: [
+          'style-loader',
           {
             loader: 'css-loader',
             options: {
               importLoaders: 2,
-              minimize: true,
-              sourceMap: true
+              minimize: true
             }
           },
-          {
-            loader: 'postcss-loader',
-            options: {
-              sourceMap: true
-            }
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true
-            }
-          }
+          'postcss-loader',
+          'sass-loader'
         ]
-      }
       },
       {
         exclude: /^node_modules$/,
@@ -50,7 +35,7 @@ module.exports = merge(common, {
           {
             loader: 'file-loader',
             options: {
-              name: '[path][name].[ext]'
+              name: '[name].[ext]'
             }
           },
           'image-webpack-loader'
@@ -62,7 +47,7 @@ module.exports = merge(common, {
         use: {
           loader: 'file-loader',
           options: {
-            name: '[path][name].[ext]'
+            name: '[name].[ext]'
           }
         }
       }
@@ -70,12 +55,9 @@ module.exports = merge(common, {
   },
   output: {
     filename: '[name].js',
-    path: path.join(__dirname, 'dist')
+    path: path.join(__dirname, 'dev')
   },
   plugins: [
-    new OptimizeJsPlugin({
-      sourceMap: true
-    }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development')
     }),

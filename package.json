@@ -2,7 +2,6 @@
   "name": "site",
   "version": "1.0.0",
   "description": "The personal website of Brandon Suen",
-  "main": "index.js",
   "repository": "https://github.com/Brandons42/site.git",
   "author": "Brandon Suen",
   "private": false,
@@ -34,10 +33,11 @@
     "webpack": "^3.8.1",
     "webpack-common-shake": "^1.5.3",
     "webpack-dev-server": "^2.9.4",
-    "webpack-merge": "^4.1.1"
+    "webpack-merge": "^4.1.1",
+    "write-file-webpack-plugin": "^4.2.0"
   },
   "scripts": {
-    "build": "webpack --config webpack.prod.js",
+    "build": "webpack --config webpack.prod.js --env production",
     "edit": "nodemon --config nodemon.edit.json",
     "start": "nodemon --config nodemon.start.json"
   },
