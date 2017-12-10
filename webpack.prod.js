@@ -5,26 +5,34 @@ const webpack = require('webpack');
 
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HappyPack = require('happypack');
+
+const happyThreadPool = HappyPack.ThreadPool({ size: 4 });
 
 module.exports = merge(common, {
   module: {
     rules: [
       {
         exclude: /^node_modules$/,
+        test: /\.jsx?$/,
+        use: {
+          loader: 'happypack/loader',
+          options: {
+            id: 'scripts'
+          }
+        }
+      },
+      {
+        exclude: /^node_modules$/,
         test: /\.sass$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                importLoaders: 2,
-                minimize: true
-              }
-            },
-            'postcss-loader',
-            'sass-loader'
-          ]
+          use: {
+            loader: 'happypack/loader',
+            options: {
+              id: 'styles'
+            }
+          }
         })
       },
       {
@@ -61,6 +69,26 @@ module.exports = merge(common, {
     new ExtractTextPlugin({
       allChunks: true,
       filename: 'css/[name].[contenthash:8].css'
+    }),
+    new HappyPack({
+      id: 'scripts',
+      loaders: ['babel-loader'],
+      threadPool: happyThreadPool
+    }),
+    new HappyPack({
+      id: 'styles',
+      loaders: [
+        {
+          loader: 'css-loader',
+          options: {
+            importLoaders: 2,
+            minimize: true
+          }
+        },
+        'postcss-loader',
+        'sass-loader'
+      ],
+      threadPool: happyThreadPool
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',

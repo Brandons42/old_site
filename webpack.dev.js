@@ -3,6 +3,10 @@ const merge = require('webpack-merge');
 const path = require('path');
 const webpack = require('webpack');
 
+const HappyPack = require('happypack');
+
+const happyThreadPool = HappyPack.ThreadPool({ size: 8 });
+
 module.exports = merge(common, {
   devServer: {
     compress: true,
@@ -14,18 +18,24 @@ module.exports = merge(common, {
     rules: [
       {
         exclude: /^node_modules$/,
+        test: /\.jsx?$/,
+        use: {
+          loader: 'happypack/loader',
+          options: {
+            id: 'scripts'
+          }
+        }
+      },
+      {
+        exclude: /^node_modules$/,
         test: /\.sass$/,
         use: [
-          'style-loader',
           {
-            loader: 'css-loader',
+            loader: 'happypack/loader',
             options: {
-              importLoaders: 2,
-              minimize: true
+              id: 'styles'
             }
-          },
-          'postcss-loader',
-          'sass-loader'
+          }
         ]
       },
       {
@@ -58,6 +68,27 @@ module.exports = merge(common, {
     path: path.join(__dirname, 'dev')
   },
   plugins: [
+    new HappyPack({
+      id: 'scripts',
+      loaders: ['babel-loader'],
+      threadPool: happyThreadPool
+    }),
+    new HappyPack({
+      id: 'styles',
+      loaders: [
+        'style-loader',
+        {
+          loader: 'css-loader',
+          options: {
+            importLoaders: 2,
+            minimize: true
+          }
+        },
+        'postcss-loader',
+        'sass-loader'
+      ],
+      threadPool: happyThreadPool
+    }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development')
     }),
