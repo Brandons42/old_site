@@ -62,7 +62,7 @@ module.exports = merge(common, {
   },
   output: {
     filename: 'js/[name].[chunkhash:8].js',
-    path: path.join(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist')
   },
   plugins: [
     new CleanWebpackPlugin(['./dist/**/*']),
@@ -98,5 +98,5 @@ module.exports = merge(common, {
       'process.env.NODE_ENV': JSON.stringify('production')
     })
   ],
-  recordsPath: path.join(__dirname, 'records.json')
+  recordsPath: path.resolve(__dirname, 'records.json')
 });

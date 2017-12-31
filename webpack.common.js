@@ -12,8 +12,8 @@ const ResourceHintsWebpackPlugin = require('resource-hints-webpack-plugin');
 module.exports = {
   entry: {
     app: [
-      path.join(__dirname, 'jsx/app.jsx'),
-      path.join(__dirname, 'js/styles.js')
+      path.resolve(__dirname, 'jsx/app.jsx'),
+      path.resolve(__dirname, 'js/styles.js')
     ]
   },
   module: {
@@ -23,7 +23,7 @@ module.exports = {
         exclude: /^node_modules$/,
         loader: 'eslint-loader',
         options: {
-          eslintPath: path.join(__dirname, '.eslintrc.json')
+          eslintPath: path.resolve(__dirname, '.eslintrc.json')
         },
         test: /\.jsx?$/
       },*/

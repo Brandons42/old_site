@@ -1,4 +1,5 @@
 const common = require('./webpack.common.js');
+//const manifest = require('./vendor-manifest.json');
 const merge = require('webpack-merge');
 const path = require('path');
 const webpack = require('webpack');
@@ -65,7 +66,7 @@ module.exports = merge(common, {
   },
   output: {
     filename: '[name].js',
-    path: path.join(__dirname, 'dev')
+    path: path.resolve(__dirname, 'dev')
   },
   plugins: [
     new HappyPack({
@@ -92,6 +93,10 @@ module.exports = merge(common, {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development')
     }),
+    /*new webpack.DllReferencePlugin({
+      context: __dirname,
+      manifest: manifest
+    }),*/
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin()
   ]

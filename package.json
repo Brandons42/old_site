@@ -37,6 +37,7 @@
     "resource-hints-webpack-plugin": "^0.0.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.0",
+    "uglifyjs-webpack-plugin": "^1.1.2",
     "webpack": "^3.8.1",
     "webpack-common-shake": "^1.5.3",
     "webpack-dev-server": "^2.9.4",
@@ -45,7 +46,8 @@
   "scripts": {
     "start": "nodemon --config nodemon.start.json",
     "build": "webpack --config webpack.prod.js --env production",
-    "edit": "nodemon --config nodemon.edit.json"
+    "edit": "nodemon --config nodemon.edit.json",
+    "reload": "webpack --config webpack.dll.js"
   },
   "dependencies": {
     "react": "^16.1.1",
