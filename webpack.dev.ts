@@ -1,18 +1,28 @@
-const common = require('./webpack.common.js');
-const merge = require('webpack-merge');
-const path = require('path');
-const webpack = require('webpack');
+import * as common from './webpack.common';
+//import * as manifest from './vendor-manifest.json';
+import * as merge from 'webpack-merge';
+import * as path from 'path';
+import * as webpack from 'webpack';
 
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
-const HappyPack = require('happypack');
+import * as HappyPack from 'happypack';
 
-const happyThreadPool = HappyPack.ThreadPool({ size: 4 });
+const happyThreadPool: object = HappyPack.ThreadPool({ size: 4 });
 
-module.exports = merge(common, {
+export default merge(common, {
+  devServer: {
+    compress: true,
+    open: true,
+    hot: true
+  },
+  //devtool: 'cheap-eval-source-map',
   module: {
     rules: [
+      /*{
+        enforce: 'pre',
+        exclude: /^node_modules$/,
+        loader: 'source-map-loader',
+        test: /\.js$/
+      },*/
       {
         exclude: /^node_modules$/,
         test: /\.tsx?$/,
@@ -26,15 +36,14 @@ module.exports = merge(common, {
       {
         exclude: /^node_modules$/,
         test: /\.sass$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: {
+        use: [
+          {
             loader: 'happypack/loader',
             options: {
               id: 'styles'
             }
           }
-        })
+        ]
       },
       {
         exclude: /^node_modules$/,
@@ -43,7 +52,7 @@ module.exports = merge(common, {
           {
             loader: 'file-loader',
             options: {
-              name: '[path][name].[hash:8].[ext]'
+              name: '[name].[ext]'
             }
           },
           'image-webpack-loader'
@@ -55,23 +64,17 @@ module.exports = merge(common, {
         use: {
           loader: 'file-loader',
           options: {
-            name: '[path][name].[hash:8].[ext]'
+            name: '[name].[ext]'
           }
         }
       }
     ]
   },
   output: {
-    filename: 'js/[name].[chunkhash:8].js',
-    path: path.resolve(__dirname, 'dist')
+    filename: '[name].js',
+    path: path.resolve(__dirname, 'dev')
   },
   plugins: [
-    new CleanWebpackPlugin(['./dist/**/*']),
-    new ExtractTextPlugin({
-      allChunks: true,
-      filename: 'css/[name].[contenthash:8].css'
-    }),
-    new ForkTsCheckerWebpackPlugin(),
     new HappyPack({
       id: 'scripts',
       loaders: [
@@ -88,6 +91,7 @@ module.exports = merge(common, {
     new HappyPack({
       id: 'styles',
       loaders: [
+        'style-loader',
         {
           loader: 'css-loader',
           options: {
@@ -100,13 +104,14 @@ module.exports = merge(common, {
       ],
       threadPool: happyThreadPool
     }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'common',
-      minChunks: 2
-    }),
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production')
-    })
-  ],
-  recordsPath: path.resolve(__dirname, 'records.json')
+      'process.env.NODE_ENV': JSON.stringify('development')
+    }),
+    /*new webpack.DllReferencePlugin({
+      context: __dirname,
+      manifest: manifest
+    }),*/
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin()
+  ]
 });

@@ -1,11 +1,11 @@
-const path = require('path');
-const webpack = require('webpack');
+import * as path from 'path';
+import * as webpack from 'webpack';
 
-const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin');
-const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const OptimizeJsPlugin = require('optimize-js-plugin');
-const ResourceHintsWebpackPlugin = require('resource-hints-webpack-plugin');
+import * as DuplicatePackageCheckerPlugin from 'duplicate-package-checker-webpack-plugin';
+import * as HardSourceWebpackPlugin from 'hard-source-webpack-plugin';
+import * as HtmlWebpackPlugin from 'html-webpack-plugin';
+import * as OptimizeJsPlugin from 'optimize-js-plugin';
+import * as ResourceHintsWebpackPlugin from 'resource-hints-webpack-plugin';
 
 module.exports = {
   entry: {

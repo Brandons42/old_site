@@ -6,10 +6,10 @@
   "ignoreRoot": false,
   "watch": [
     ".babelrc",
-    ".eslintrc.json",
     "postcss.config.js",
     "tsconfig.json",
-    "webpack.common.js",
-    "webpack.prod.js"
+    "tslint.json",
+    "webpack.common.ts",
+    "webpack.prod.ts"
   ]
 }

@@ -1,9 +1,9 @@
-const path = require('path');
-const webpack = require('webpack');
+import * as path from 'path';
+import * as webpack from 'webpack';
 
-const UgilfyJsPlugin = require('uglifyjs-webpack-plugin');
+import * as UgilfyJsPlugin from 'uglifyjs-webpack-plugin';
 
-module.exports = {
+export default {
   entry: {
     vendor: [
       'react',

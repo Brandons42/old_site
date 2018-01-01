@@ -2,14 +2,14 @@
   "env": {
     "NODE_ENV": "development"
   },
-  "exec": "webpack-dev-server --config webpack.dev.js",
+  "exec": "webpack-dev-server --config webpack.dev.ts",
   "ignoreRoot": false,
   "watch": [
     ".babelrc",
-    ".eslintrc.json",
     "postcss.config.js",
     "tsconfig.json",
-    "webpack.common.js",
-    "webpack.dev.js"
+    "tslint.json",
+    "webpack.common.ts",
+    "webpack.dev.ts"
   ]
 }
