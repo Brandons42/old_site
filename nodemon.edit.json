@@ -6,6 +6,7 @@
   "ignoreRoot": false,
   "watch": [
     ".babelrc",
+    ".browserslistrc",
     "postcss.config.js",
     "tsconfig.json",
     "tslint.json",
