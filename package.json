@@ -13,6 +13,7 @@
     "babel-loader": "^7.1.2",
     "babel-plugin-preval": "^1.6.2",
     "babel-plugin-transform-imports": "^1.4.1",
+    "cache-loader": "^1.2.0",
     "clean-webpack-plugin": "^0.1.17",
     "css-loader": "^0.28.7",
     "cssnano": "^3.10.0",

@@ -55,7 +55,20 @@ export default merge(common, {
               name: '[name].[ext]'
             }
           },
-          'image-webpack-loader'
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              gifsicle: {
+                optimizationLevel: 1
+              },
+              optipng: {
+                optimizationLevel: 0
+              },
+              pngquant: {
+                speed: 10
+              }
+            }
+          }
         ]
       },
       {
