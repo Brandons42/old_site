@@ -4,9 +4,5 @@
     ["transform-imports", {
 
     }]
-  ],
-  "presets": [
-    "env",
-    "react"
   ]
 }

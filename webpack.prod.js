@@ -5,6 +5,7 @@ const webpack = require('webpack');
 
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const HappyPack = require('happypack');
 
 const happyThreadPool = HappyPack.ThreadPool({ size: 4 });
@@ -14,7 +15,7 @@ module.exports = merge(common, {
     rules: [
       {
         exclude: /^node_modules$/,
-        test: /\.jsx?$/,
+        test: /\.tsx?$/,
         use: {
           loader: 'happypack/loader',
           options: {
@@ -70,9 +71,18 @@ module.exports = merge(common, {
       allChunks: true,
       filename: 'css/[name].[contenthash:8].css'
     }),
+    new ForkTsCheckerWebpackPlugin(),
     new HappyPack({
       id: 'scripts',
-      loaders: ['babel-loader'],
+      loaders: [
+        'babel-loader',
+        {
+          loader: 'ts-loader',
+          options: {
+            happyPackMode: true
+          }
+        }
+      ],
       threadPool: happyThreadPool
     }),
     new HappyPack({

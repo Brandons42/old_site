@@ -1,8 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 
-import img from '../img/img.jpeg';
+const img = require('../img/img.jpeg');
 
-export default class Content extends React.Component {
+export class Content extends React.Component {
   render() {
     return (
       <div>

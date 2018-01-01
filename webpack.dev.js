@@ -17,9 +17,15 @@ module.exports = merge(common, {
   //devtool: 'cheap-eval-source-map',
   module: {
     rules: [
+      /*{
+        enforce: 'pre',
+        exclude: /^node_modules$/,
+        loader: 'source-map-loader',
+        test: /\.js$/
+      },*/
       {
         exclude: /^node_modules$/,
-        test: /\.jsx?$/,
+        test: /\.tsx?$/,
         use: {
           loader: 'happypack/loader',
           options: {
@@ -71,7 +77,15 @@ module.exports = merge(common, {
   plugins: [
     new HappyPack({
       id: 'scripts',
-      loaders: ['babel-loader'],
+      loaders: [
+        'babel-loader',
+        {
+          loader: 'ts-loader',
+          options: {
+            happyPackMode: true
+          }
+        }
+      ],
       threadPool: happyThreadPool
     }),
     new HappyPack({

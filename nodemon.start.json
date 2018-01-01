@@ -8,6 +8,7 @@
     ".babelrc",
     ".eslintrc.json",
     "postcss.config.js",
+    "tsconfig.json",
     "webpack.common.js",
     "webpack.dev.js"
   ]
