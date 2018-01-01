@@ -96,7 +96,6 @@ export default merge(common, {
           loader: 'css-loader',
           options: {
             importLoaders: 2,
-            minimize: true,
             modules: true
           }
         },

@@ -5,8 +5,11 @@ import * as DuplicatePackageCheckerPlugin from 'duplicate-package-checker-webpac
 import * as FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 import * as HardSourceWebpackPlugin from 'hard-source-webpack-plugin';
 import * as HtmlWebpackPlugin from 'html-webpack-plugin';
+import * as OptimizeCssAssetsPlugin from 'optimize-css-assets-webpack-plugin';
 import * as OptimizeJsPlugin from 'optimize-js-plugin';
 import * as ResourceHintsWebpackPlugin from 'resource-hints-webpack-plugin';
+
+import * as cssnano from 'cssnano';
 
 module.exports = {
   entry: {
@@ -37,6 +40,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './index.pug'
+    }),
+    new OptimizeCssAssetsPlugin({
+      cssProcessor: cssnano,
+      canPrint: false
     }),
     new OptimizeJsPlugin(),
     new ResourceHintsWebpackPlugin(),
