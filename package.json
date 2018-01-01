@@ -48,7 +48,8 @@
     "webpack": "^3.8.1",
     "webpack-common-shake": "^1.5.3",
     "webpack-dev-server": "^2.9.4",
-    "webpack-merge": "^4.1.1"
+    "webpack-merge": "^4.1.1",
+    "webpack-visualizer-plugin": "^0.1.11"
   },
   "scripts": {
     "start": "nodemon --config nodemon.start.json",

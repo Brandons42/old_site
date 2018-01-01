@@ -7,6 +7,7 @@ import * as CleanWebpackPlugin from 'clean-webpack-plugin';
 import * as ExtractTextPlugin from 'extract-text-webpack-plugin';
 import * as ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import * as HappyPack from 'happypack';
+import * as Visualizer from 'webpack-visualizer-plugin';
 
 const happyThreadPool: object = HappyPack.ThreadPool({ size: 4 });
 
@@ -100,6 +101,9 @@ export default merge(common, {
         'sass-loader'
       ],
       threadPool: happyThreadPool
+    }),
+    new Visualizer({
+      filename: '../stats.html'
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'common',
