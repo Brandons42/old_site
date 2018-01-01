@@ -19,7 +19,7 @@
         "byName": {},
         "byBlocks": {},
         "usedIds": {
-          "1": 1
+          "0": 0
         }
       }
     }
@@ -350,6 +350,25 @@
         "usedIds": {
           "0": 0,
           "1": 1
+        }
+      },
+      "chunks": {
+        "byName": {},
+        "byBlocks": {},
+        "usedIds": {
+          "1": 1
+        }
+      }
+    }
+  ],
+  "favicons-webpack-plugin for \"iconstats-[hash].json\"": [
+    {
+      "modules": {
+        "byIdentifier": {
+          "node_modules/favicons-webpack-plugin/lib/favicons.js?{\"outputFilePrefix\":\"icons-[hash]/\",\"icons\":{\"android\":true,\"appleIcon\":true,\"appleStartup\":true,\"coast\":false,\"favicons\":true,\"firefox\":true,\"opengraph\":false,\"twitter\":false,\"yandex\":false,\"windows\":false},\"background\":\"#fff\",\"persistentCache\":true,\"appName\":\"site\"}!img/temporary-favicon.png": 0
+        },
+        "usedIds": {
+          "0": 0
         }
       },
       "chunks": {
