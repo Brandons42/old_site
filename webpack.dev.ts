@@ -96,7 +96,8 @@ export default merge(common, {
           loader: 'css-loader',
           options: {
             importLoaders: 2,
-            minimize: true
+            minimize: true,
+            modules: true
           }
         },
         'postcss-loader',
