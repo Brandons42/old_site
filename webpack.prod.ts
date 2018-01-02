@@ -40,8 +40,9 @@ export default merge(common, {
       },
       {
         exclude: /^node_modules$/,
-        test: /\.(png|svg|jpe?g|gif)$/,
+        test: /\.(png|jpe?g|gif)$/,
         use: [
+          //'cache-loader',
           {
             loader: 'file-loader',
             options: {
@@ -90,6 +91,7 @@ export default merge(common, {
     new HappyPack({
       id: 'scripts',
       loaders: [
+        //'cache-loader',
         'babel-loader',
         {
           loader: 'ts-loader',
@@ -103,6 +105,7 @@ export default merge(common, {
     new HappyPack({
       id: 'styles',
       loaders: [
+        //'cache-loader',
         {
           loader: 'css-loader',
           options: {

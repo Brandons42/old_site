@@ -4,6 +4,7 @@ import * as webpack from 'webpack';
 import * as DuplicatePackageCheckerPlugin from 'duplicate-package-checker-webpack-plugin';
 import * as FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 import * as HardSourceWebpackPlugin from 'hard-source-webpack-plugin';
+import * as HtmlWebpackInlineSVGPlugin from 'html-webpack-inline-svg-plugin';
 import * as HtmlWebpackPlugin from 'html-webpack-plugin';
 import * as OptimizeCssAssetsPlugin from 'optimize-css-assets-webpack-plugin';
 import * as OptimizeJsPlugin from 'optimize-js-plugin';
@@ -41,6 +42,7 @@ module.exports = {
       filename: 'index.html',
       template: './index.pug'
     }),
+    new HtmlWebpackInlineSVGPlugin(),
     new OptimizeCssAssetsPlugin({
       cssProcessor: cssnano,
       canPrint: false

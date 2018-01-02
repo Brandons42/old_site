@@ -47,8 +47,9 @@ export default merge(common, {
       },
       {
         exclude: /^node_modules$/,
-        test: /\.(png|svg|jpe?g|gif)$/,
+        test: /\.(png|jpe?g|gif)$/,
         use: [
+          //'cache-loader',
           {
             loader: 'file-loader',
             options: {
