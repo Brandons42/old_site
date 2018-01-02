@@ -1,3 +1,4 @@
+import * as cssnano from 'cssnano';
 import * as path from 'path';
 import * as webpack from 'webpack';
 
@@ -9,8 +10,6 @@ import * as HtmlWebpackPlugin from 'html-webpack-plugin';
 import * as OptimizeCssAssetsPlugin from 'optimize-css-assets-webpack-plugin';
 import * as OptimizeJsPlugin from 'optimize-js-plugin';
 import * as ResourceHintsWebpackPlugin from 'resource-hints-webpack-plugin';
-
-import * as cssnano from 'cssnano';
 
 module.exports = {
   entry: {
@@ -37,7 +36,7 @@ module.exports = {
   plugins: [
     new DuplicatePackageCheckerPlugin(),
     new FaviconsWebpackPlugin('./img/temporary-favicon.png'),
-    new HardSourceWebpackPlugin(),
+    //new HardSourceWebpackPlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './index.pug'

@@ -36,6 +36,7 @@ var __extends = this && this.__extends || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(84);
+__webpack_require__(108);
 var img = __webpack_require__(105);
 var Content = /** @class */(function (_super) {
     __extends(Content, _super);
@@ -43,7 +44,7 @@ var Content = /** @class */(function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Content.prototype.render = function () {
-        return React.createElement("div", null, React.createElement("h1", null, "Hello, world!"), React.createElement("img", { src: img }));
+        return React.createElement("div", null, React.createElement("h1", null, "Hello, world!"), React.createElement("img", { className: 'img', src: img }));
     };
     return Content;
 })(React.Component);
@@ -69,6 +70,13 @@ __webpack_require__(104);
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/img.41a2fe3a.jpeg";
+
+/***/ }),
+
+/***/ 108:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 

@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import '../sass-modules/content.sass';
+
 const img = require('../img/img.jpeg');
 
 export class Content extends React.Component {
@@ -7,7 +9,7 @@ export class Content extends React.Component {
     return (
       <div>
         <h1>Hello, world!</h1>
-        <img src={img}/>
+        <img className='img' src={img}/>
       </div>
     );
   }

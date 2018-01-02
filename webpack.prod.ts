@@ -1,4 +1,5 @@
 import * as common from './webpack.common';
+import * as glob from 'glob-all';
 import * as merge from 'webpack-merge';
 import * as path from 'path';
 import * as webpack from 'webpack';
@@ -7,6 +8,7 @@ import * as CleanWebpackPlugin from 'clean-webpack-plugin';
 import * as ExtractTextPlugin from 'extract-text-webpack-plugin';
 import * as ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import * as HappyPack from 'happypack';
+import * as PurifyCSSPlugin from 'purifycss-webpack';
 import * as StatsPlugin from 'stats-webpack-plugin';
 import * as Visualizer from 'webpack-visualizer-plugin';
 
@@ -109,8 +111,7 @@ export default merge(common, {
         {
           loader: 'css-loader',
           options: {
-            importLoaders: 2,
-            modules: true
+            importLoaders: 2
           }
         },
         'postcss-loader',
@@ -118,6 +119,22 @@ export default merge(common, {
       ],
       threadPool: happyThreadPool
     }),
+    /*new PurifyCSSPlugin({
+      moduleExtensions: [
+        '.pug',
+        '.ts',
+        '.tsx',
+      ],
+      paths: glob.sync([
+        path.resolve(__dirname, 'index.pug'),
+        path.resolve(__dirname, 'tsx', '**', '*.ts'),
+        path.resolve(__dirname, 'tsx', '**', '*.tsx')
+      ]),
+      purifyOptions: {
+        whitelist: ['*-local_*']
+      },
+      styleExtensions: ['.sass']
+    }),*/
     new StatsPlugin('../stats.json'),
     new Visualizer({
       filename: '../stats.html'

@@ -154,7 +154,8 @@
       "node_modules/extract-text-webpack-plugin/dist/loader.js??ref--3-0!node_modules/style-loader/index.js!node_modules/happypack/loader.js??ref--3-2!sass-global/main.sass": 104,
       "node_modules/file-loader/dist/cjs.js??ref--4-0!node_modules/image-webpack-loader/index.js??ref--4-1!img/img.jpeg": 105,
       "node_modules/cache-loader/dist/cjs.js!node_modules/file-loader/dist/cjs.js??ref--4-1!node_modules/image-webpack-loader/index.js??ref--4-2!img/img.jpeg": 106,
-      "node_modules/cache-loader/dist/cjs.js!node_modules/file-loader/dist/cjs.js??ref--4-1!node_modules/cache-loader/dist/cjs.js!node_modules/image-webpack-loader/index.js??ref--4-3!img/img.jpeg": 107
+      "node_modules/cache-loader/dist/cjs.js!node_modules/file-loader/dist/cjs.js??ref--4-1!node_modules/cache-loader/dist/cjs.js!node_modules/image-webpack-loader/index.js??ref--4-3!img/img.jpeg": 107,
+      "node_modules/extract-text-webpack-plugin/dist/loader.js??ref--3-0!node_modules/style-loader/index.js!node_modules/happypack/loader.js??ref--3-2!sass-modules/content.sass": 108
     },
     "usedIds": {
       "0": 0,
@@ -264,7 +265,8 @@
       "104": 104,
       "105": 105,
       "106": 106,
-      "107": 107
+      "107": 107,
+      "108": 108
     }
   },
   "chunks": {
@@ -365,6 +367,23 @@
           "1": 1
         }
       }
+    },
+    {
+      "modules": {
+        "byIdentifier": {
+          "node_modules/happypack/loader.js?{\"id\":\"styles\"}!sass-global/main.sass": 0
+        },
+        "usedIds": {
+          "0": 0
+        }
+      },
+      "chunks": {
+        "byName": {},
+        "byBlocks": {},
+        "usedIds": {
+          "1": 1
+        }
+      }
     }
   ],
   "favicons-webpack-plugin for \"iconstats-[hash].json\"": [
@@ -372,6 +391,44 @@
       "modules": {
         "byIdentifier": {
           "node_modules/favicons-webpack-plugin/lib/favicons.js?{\"outputFilePrefix\":\"icons-[hash]/\",\"icons\":{\"android\":true,\"appleIcon\":true,\"appleStartup\":true,\"coast\":false,\"favicons\":true,\"firefox\":true,\"opengraph\":false,\"twitter\":false,\"yandex\":false,\"windows\":false},\"background\":\"#fff\",\"persistentCache\":true,\"appName\":\"site\"}!img/temporary-favicon.png": 0
+        },
+        "usedIds": {
+          "0": 0
+        }
+      },
+      "chunks": {
+        "byName": {},
+        "byBlocks": {},
+        "usedIds": {
+          "0": 0
+        }
+      }
+    }
+  ],
+  "extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/happypack/loader.js??ref--3-2!sass-modules/content.sass": [
+    {
+      "modules": {
+        "byIdentifier": {
+          "node_modules/happypack/loader.js?{\"id\":\"styles\"}!sass-modules/content.sass": 0,
+          "node_modules/css-loader/lib/css-base.js": 1
+        },
+        "usedIds": {
+          "0": 0,
+          "1": 1
+        }
+      },
+      "chunks": {
+        "byName": {},
+        "byBlocks": {},
+        "usedIds": {
+          "1": 1
+        }
+      }
+    },
+    {
+      "modules": {
+        "byIdentifier": {
+          "node_modules/happypack/loader.js?{\"id\":\"styles\"}!sass-modules/content.sass": 0
         },
         "usedIds": {
           "0": 0
