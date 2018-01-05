@@ -10,11 +10,11 @@ import * as ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import * as HappyPack from 'happypack';
 import * as PurifyCSSPlugin from 'purifycss-webpack';
 import * as StatsPlugin from 'stats-webpack-plugin';
-import * as Visualizer from 'webpack-visualizer-plugin';
+import * as WebpackMonitor from 'webpack-monitor';
 
 const happyThreadPool: object = HappyPack.ThreadPool({ size: 4 });
 
-export default merge(common, {
+const config: object = {
   module: {
     rules: [
       {
@@ -136,9 +136,6 @@ export default merge(common, {
       styleExtensions: ['.sass']
     }),*/
     new StatsPlugin('../stats.json'),
-    new Visualizer({
-      filename: '../stats.html'
-    }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'common',
       minChunks: 2
@@ -148,4 +145,14 @@ export default merge(common, {
     })
   ],
   recordsPath: path.resolve(__dirname, 'records.json')
+};
+
+export { config as production };
+
+export default merge(common, config, {
+  plugins: [
+    new WebpackMonitor({
+      target: './stats.json'
+    })
+  ]
 });

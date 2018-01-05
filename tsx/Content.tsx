@@ -9,6 +9,7 @@ export class Content extends React.Component {
     return (
       <div>
         <h1>Hello, world!</h1>
+        <p>Here's an image!</p>
         <img className='img' src={img}/>
       </div>
     );

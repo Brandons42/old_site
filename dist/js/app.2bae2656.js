@@ -44,7 +44,7 @@ var Content = /** @class */(function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Content.prototype.render = function () {
-        return React.createElement("div", null, React.createElement("h1", null, "Hello, world!"), React.createElement("img", { className: 'img', src: img }));
+        return React.createElement("div", null, React.createElement("h1", null, "Hello, world!"), React.createElement("p", null, "Here's an image!"), React.createElement("img", { className: 'img', src: img }));
     };
     return Content;
 })(React.Component);

@@ -56,13 +56,15 @@
     "webpack-common-shake": "^1.5.3",
     "webpack-dev-server": "^2.9.4",
     "webpack-merge": "^4.1.1",
-    "webpack-visualizer-plugin": "^0.1.11"
+    "webpack-monitor": "^1.0.14"
   },
   "scripts": {
     "start": "nodemon --config nodemon.start.json",
     "build": "webpack --config webpack.prod.ts --env production",
     "edit": "nodemon --config nodemon.edit.json",
-    "reload": "webpack --config webpack.dll.ts"
+    "optimize": "nodemon --config nodemon.optimize.json",
+    "reload": "webpack --config webpack.dll.ts",
+    "stats": "webpack --config webpack.stats.ts"
   },
   "dependencies": {
     "@types/react": "^16.0.31",
