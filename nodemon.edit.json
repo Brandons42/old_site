@@ -2,7 +2,7 @@
   "env": {
     "NODE_ENV": "production"
   },
-  "exec": "yarn build",
+  "exec": "webpack --config webpack.prod.ts --env production --watch",
   "ignoreRoot": false,
   "watch": [
     ".babelrc",

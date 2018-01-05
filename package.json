@@ -59,11 +59,11 @@
     "webpack-monitor": "^1.0.14"
   },
   "scripts": {
-    "start": "nodemon --config nodemon.start.json",
     "build": "webpack --config webpack.prod.ts --env production",
     "edit": "nodemon --config nodemon.edit.json",
     "optimize": "nodemon --config nodemon.optimize.json",
     "reload": "webpack --config webpack.dll.ts",
+    "start": "nodemon --config nodemon.start.json",
     "stats": "webpack --config webpack.stats.ts"
   },
   "dependencies": {

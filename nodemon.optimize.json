@@ -2,7 +2,7 @@
   "env": {
     "NODE_ENV": "production"
   },
-  "exec": "yarn stats",
+  "exec": "webpack --config webpack.stats.ts --watch",
   "ignoreRoot": false,
   "watch": [
     ".babelrc",
