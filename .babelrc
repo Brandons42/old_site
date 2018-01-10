@@ -1,4 +1,13 @@
 {
+  "env": {
+    "karma": {
+      "plugins": [
+        ["istanbul", {
+          "exclude": ["tests/**/*.*"]
+        }]
+      ]
+    }
+  },
   "plugins": [
     "preval",
     ["transform-imports", {

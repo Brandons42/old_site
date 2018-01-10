@@ -14,15 +14,15 @@ export default merge(common, {
     open: true,
     hot: true
   },
-  //devtool: 'cheap-eval-source-map',
+  devtool: 'cheap-eval-source-map',
   module: {
     rules: [
-      /*{
+      {
         enforce: 'pre',
         exclude: /^node_modules$/,
         loader: 'source-map-loader',
         test: /\.js$/
-      },*/
+      },
       {
         exclude: /^node_modules$/,
         test: /\.tsx?$/,
