@@ -10,6 +10,7 @@ import * as HtmlWebpackPlugin from 'html-webpack-plugin';
 import * as OptimizeCssAssetsPlugin from 'optimize-css-assets-webpack-plugin';
 import * as OptimizeJsPlugin from 'optimize-js-plugin';
 import * as ResourceHintsWebpackPlugin from 'resource-hints-webpack-plugin';
+import * as UgilfyJsPlugin from 'uglifyjs-webpack-plugin';
 
 module.exports = {
   entry: {
@@ -53,9 +54,16 @@ module.exports = {
         context: __dirname
       }
     }),
+    new UgilfyJsPlugin({
+      parallel: true
+    }),
     new webpack.optimize.ModuleConcatenationPlugin(),
   ],
   resolve: {
+    alias: {
+      'img': path.resolve(__dirname, 'img/'),
+      'sass': path.resolve(__dirname, 'sass-modules/')
+    },
     extensions: [
       '.js',
       '.json',
