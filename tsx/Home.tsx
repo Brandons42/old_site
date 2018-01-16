@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import 'sass/home.sass';
+import 'sass/home';
 
 export class Home extends React.Component {
   render() {

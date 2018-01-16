@@ -49,24 +49,25 @@ module.exports = {
     }),
     new OptimizeJsPlugin(),
     new ResourceHintsWebpackPlugin(),
+    new UgilfyJsPlugin({
+      parallel: true
+    }),
     new webpack.LoaderOptionsPlugin({
       options: {
         context: __dirname
       }
-    }),
-    new UgilfyJsPlugin({
-      parallel: true
     }),
     new webpack.optimize.ModuleConcatenationPlugin(),
   ],
   resolve: {
     alias: {
       'img': path.resolve(__dirname, 'img/'),
-      'sass': path.resolve(__dirname, 'sass-modules/')
+      'sass': path.resolve(__dirname, 'sass/modules/')
     },
     extensions: [
       '.js',
       '.json',
+      '.sass',
       '.ts',
       '.tsx'
     ]

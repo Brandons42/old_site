@@ -1,1 +1,1 @@
-require('../sass-global/main.sass');
+import '../sass/global/main';

@@ -109,11 +109,11 @@ export default merge(common, {
         {
           loader: 'css-loader',
           options: {
-            importLoaders: 2
+            importLoaders: 1//2
           }
         },
-        'postcss-loader',
-        'sass-loader'
+        'postcss-loader'//,
+        //'sass-loader'
       ],
       threadPool: happyThreadPool
     }),
