@@ -4,19 +4,22 @@ import * as webpack from 'webpack';
 
 import * as DuplicatePackageCheckerPlugin from 'duplicate-package-checker-webpack-plugin';
 import * as FaviconsWebpackPlugin from 'favicons-webpack-plugin';
-import * as HardSourceWebpackPlugin from 'hard-source-webpack-plugin';
-import * as HtmlWebpackInlineSVGPlugin from 'html-webpack-inline-svg-plugin';
+import * as HappyPack from 'happypack';
 import * as HtmlWebpackPlugin from 'html-webpack-plugin';
+import * as HtmlWebpackInlineSVGPlugin from 'html-webpack-inline-svg-plugin';
 import * as OptimizeCssAssetsPlugin from 'optimize-css-assets-webpack-plugin';
 import * as OptimizeJsPlugin from 'optimize-js-plugin';
 import * as ResourceHintsWebpackPlugin from 'resource-hints-webpack-plugin';
 import * as UgilfyJsPlugin from 'uglifyjs-webpack-plugin';
 
-module.exports = {
+export const happyThreadPool: object = HappyPack.ThreadPool({ size: 4 });
+
+export const common: object = {
   entry: {
     app: [
-      path.resolve(__dirname, 'tsx/App.tsx'),
-      path.resolve(__dirname, 'ts/styles.ts')
+      path.resolve(__dirname, 'sass/global/main.sass'),
+      path.resolve(__dirname, 'sass/global/temporary.critical.sass'),
+      path.resolve(__dirname, 'tsx/App.tsx')
     ]
   },
   module: {
@@ -29,17 +32,33 @@ module.exports = {
       },
       {
         exclude: /^node_modules$/,
-        loader: 'pug-loader',
-        test: /\.pug$/
+        test: /\.tsx?$/,
+        use: {
+          loader: 'happypack/loader',
+          options: {
+            id: 'scripts'
+          }
+        }
+      },
+      {
+        exclude: /^node_modules$/,
+        test: /\.pug$/,
+        use: [
+          'pug-loader',
+          'posthtml-loader'
+        ]
       }
     ]
   },
   plugins: [
     new DuplicatePackageCheckerPlugin(),
     new FaviconsWebpackPlugin('./img/temporary-favicon.png'),
-    //new HardSourceWebpackPlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html',
+      minify: {
+        collapseWhitespace: true,//May need to disable
+        removeComments: true
+      },
       template: './index.pug'
     }),
     new HtmlWebpackInlineSVGPlugin(),
@@ -61,8 +80,8 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      'img': path.resolve(__dirname, 'img/'),
-      'sass': path.resolve(__dirname, 'sass/modules/')
+      img: path.resolve(process.cwd(), 'img'),
+      sass: path.resolve(process.cwd(), 'sass/modules')
     },
     extensions: [
       '.js',

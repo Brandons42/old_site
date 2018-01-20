@@ -1,4 +1,4 @@
-import * as common from './webpack.common';
+import { common } from './webpack.common';
 import * as merge from 'webpack-merge';
 import { production } from './webpack.prod';
 

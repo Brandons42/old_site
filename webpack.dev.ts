@@ -1,12 +1,15 @@
-import * as common from './webpack.common';
+//import babelrc from './.babelrc';
+import { common, happyThreadPool } from './webpack.common';
 //import * as manifest from './vendor-manifest.json';
 import * as merge from 'webpack-merge';
+//import * as objectHash from 'node-object-hash';
 import * as path from 'path';
+//import * as postcssConfig from './postcss.config.js';
+//import * as tsConfig from './tsconfig.json';
 import * as webpack from 'webpack';
 
 import * as HappyPack from 'happypack';
-
-const happyThreadPool: object = HappyPack.ThreadPool({ size: 4 });
+//import * as HardSourceWebpackPlugin from 'hard-source-webpack-plugin';
 
 export default merge(common, {
   devServer: {
@@ -22,16 +25,6 @@ export default merge(common, {
         exclude: /^node_modules$/,
         loader: 'source-map-loader',
         test: /\.js$/
-      },
-      {
-        exclude: /^node_modules$/,
-        test: /\.tsx?$/,
-        use: {
-          loader: 'happypack/loader',
-          options: {
-            id: 'scripts'
-          }
-        }
       },
       {
         exclude: /^node_modules$/,
@@ -86,12 +79,14 @@ export default merge(common, {
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'dev')
+    path: path.resolve(__dirname, 'dev'),
+    publicPath: '/'
   },
   plugins: [
     new HappyPack({
       id: 'scripts',
       loaders: [
+        //'cache-loader',
         'babel-loader',
         {
           loader: 'ts-loader',
@@ -105,18 +100,50 @@ export default merge(common, {
     new HappyPack({
       id: 'styles',
       loaders: [
-        'style-loader',
+        {
+          loader: 'style-loader',
+          options: {
+            //sourceMap: true
+          }
+        },
         {
           loader: 'css-loader',
           options: {
-            importLoaders: 1//2
+            alias: {
+              //img: path.resolve(__dirname, '../../img/')
+            },
+            importLoaders: 2,//1
+            //sourceMap: true
           }
         },
-        'postcss-loader'//,
-        //'sass-loader'
+        {
+          loader: 'postcss-loader',
+          options: {
+            //sourceMap: true
+          }
+        },
+        {
+          loader: 'sass-loader',
+          options: {
+            includePaths: [
+              //path.resolve(__dirname, '../../img/')
+            ],
+            //sourceMap: true
+          }
+        }
       ],
       threadPool: happyThreadPool
     }),
+    /*new HardSourceWebpackPlugin({
+      cacheDirectory: 'node_modules/.cache/hard-source/dev/[confighash]',
+      configHash: function(webpackConfig: object) {
+        const hashed: object = {
+          postcssConfig: postcssConfig,
+          webpackConfig: webpackConfig
+        };
+        return objectHash({sort: false}).hash(webpackConfig);
+      }
+    }),*/
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development')
     }),

@@ -9,6 +9,7 @@
     ".browserslistrc",
     ".stylelintrc.json",
     "postcss.config.js",
+    "posthtml.config.js",
     "tsconfig.json",
     "tslint.json",
     "webpack.common.ts",

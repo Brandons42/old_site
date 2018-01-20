@@ -1,6 +1,7 @@
-import * as common from './webpack.common';
+import { common, happyThreadPool } from './webpack.common';
 import * as glob from 'glob-all';
 import * as merge from 'webpack-merge';
+//import * as objectHash from 'node-object-hash';
 import * as path from 'path';
 import * as webpack from 'webpack';
 
@@ -8,34 +9,55 @@ import * as CleanWebpackPlugin from 'clean-webpack-plugin';
 import * as ExtractTextPlugin from 'extract-text-webpack-plugin';
 import * as ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import * as HappyPack from 'happypack';
+//import * as HardSourceWebpackPlugin from 'hard-source-webpack-plugin';
 import * as PurifyCSSPlugin from 'purifycss-webpack';
 import * as StatsPlugin from 'stats-webpack-plugin';
+import * as StyleExtHtmlWebpackPlugin from 'style-ext-html-webpack-plugin';
 import * as WebpackMonitor from 'webpack-monitor';
 
-const happyThreadPool: object = HappyPack.ThreadPool({ size: 4 });
+const external = new ExtractTextPlugin('css/[name].[contenthash:8].css');
+const internal = new ExtractTextPlugin('css/inline.css');
+
+const styles: object = {
+  loaders: [
+    //'cache-loader',
+    {
+      loader: 'css-loader',
+      options: {
+        importLoaders: 2
+      }
+    },
+    'postcss-loader',
+    'sass-loader'
+  ],
+  threadPool: happyThreadPool
+};
 
 const config: object = {
   module: {
     rules: [
       {
         exclude: /^node_modules$/,
-        test: /\.tsx?$/,
-        use: {
-          loader: 'happypack/loader',
-          options: {
-            id: 'scripts'
-          }
-        }
-      },
-      {
-        exclude: /^node_modules$/,
-        test: /\.sass$/,
-        use: ExtractTextPlugin.extract({
+        test: /\.critical\.sass$/,
+        use: internal.extract({
           fallback: 'style-loader',
           use: {
             loader: 'happypack/loader',
             options: {
-              id: 'styles'
+              id: 'internal'
+            }
+          }
+        })
+      },
+      {
+        exclude: /(node_modules|\.critical\.sass)$/,
+        test: /\.sass$/,
+        use: external.extract({
+          fallback: 'style-loader',
+          use: {
+            loader: 'happypack/loader',
+            options: {
+              id: 'external'
             }
           }
         })
@@ -84,11 +106,9 @@ const config: object = {
     path: path.resolve(__dirname, 'dist')
   },
   plugins: [
+    external,
+    internal,
     new CleanWebpackPlugin(['./dist/**/*']),
-    new ExtractTextPlugin({
-      allChunks: true,
-      filename: 'css/[name].[contenthash:8].css'
-    }),
     new ForkTsCheckerWebpackPlugin(),
     new HappyPack({
       id: 'scripts',
@@ -104,21 +124,13 @@ const config: object = {
       ],
       threadPool: happyThreadPool
     }),
-    new HappyPack({
-      id: 'styles',
-      loaders: [
-        //'cache-loader',
-        {
-          loader: 'css-loader',
-          options: {
-            importLoaders: 2
-          }
-        },
-        'postcss-loader',
-        'sass-loader'
-      ],
-      threadPool: happyThreadPool
-    }),
+    new HappyPack(merge(styles, {
+      id: 'external'
+    })),
+    new HappyPack(merge(styles, {
+      id: 'internal'
+    })),
+    //new HardSourceWebpackPlugin(),
     /*new PurifyCSSPlugin({
       moduleExtensions: [
         '.pug',
@@ -136,6 +148,7 @@ const config: object = {
       styleExtensions: ['.sass']
     }),*/
     new StatsPlugin('../stats.json'),
+    new StyleExtHtmlWebpackPlugin('css/inline.css'),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'common',
       minChunks: 2
