@@ -20,9 +20,20 @@ export default merge(common, {
   devServer: {
     compress: true,
     open: true,
-    hot: true
+    //historyApiFallback: true,
+    hot: true,
+    stats: 'errors-only'
   },
   devtool: 'cheap-eval-source-map',
+  entry: {
+    app: [
+      //'react-hot-loader/patch',
+      path.resolve(__dirname, 'sass/global/main.sass'),
+      path.resolve(__dirname, 'sass/global/temporary.critical.sass'),
+      //path.resolve(__dirname, 'tsx/hot/Hot.tsx')
+      path.resolve(__dirname, 'tsx/App.tsx')
+    ]
+  },
   module: {
     rules: [
       {
@@ -45,20 +56,15 @@ export default merge(common, {
       },
       {
         exclude: /^node_modules$/,
-        test: /\.(png|jpe?g|gif)$/,
+        test: /\.(gif|jpe?g|png|svg)$/,
         use: [
           {
             loader: 'cache-loader',
             options: {
-              cacheDirectory: path.resolve(__dirname, '.cache/cache-loader/prod')
+              cacheDirectory: path.resolve(__dirname, '.cache/cache-loader/dev')
             }
           },
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]'
-            }
-          },
+          'url-loader',
           {
             loader: 'image-webpack-loader',
             options: {
@@ -89,19 +95,21 @@ export default merge(common, {
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'dev'),
-    publicPath: '/'
+    path: path.resolve(__dirname, 'dev')//,
+    //publicPath: '/'
   },
   plugins: [
     new HappyPack({
       id: 'scripts',
       loaders: [
         //'cache-loader',
+        //'react-hot-loader/webpack',(babel plugin is also disabled)
         'babel-loader',
         {
           loader: 'ts-loader',
           options: {
-            happyPackMode: true
+            happyPackMode: true,
+            transpileOnly: true
           }
         }
       ],
@@ -155,6 +163,7 @@ export default merge(common, {
           stylelintConfig: stylelintConfig,
           tsconfig: tsconfig,
           tslint: tslint,
+          webpackCommon: common,
           webpackConfig: webpackConfig
         });
       },

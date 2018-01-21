@@ -15,7 +15,6 @@ import * as webpack from 'webpack';
 
 import * as CleanWebpackPlugin from 'clean-webpack-plugin';
 import * as ExtractTextPlugin from 'extract-text-webpack-plugin';
-import * as ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import * as HappyPack from 'happypack';
 import * as HardSourceWebpackPlugin from 'hard-source-webpack-plugin';
 import * as PurifyCSSPlugin from 'purifycss-webpack';
@@ -42,6 +41,13 @@ const styles: object = {
 };
 
 const config: object = {
+  entry: {
+    app: [
+      path.resolve(__dirname, 'sass/global/main.sass'),
+      path.resolve(__dirname, 'sass/global/temporary.critical.sass'),
+      path.resolve(__dirname, 'tsx/App.tsx')
+    ]
+  },
   module: {
     rules: [
       {
@@ -72,7 +78,7 @@ const config: object = {
       },
       {
         exclude: /^node_modules$/,
-        test: /\.(png|jpe?g|gif)$/,
+        test: /\.(gif|jpe?g|png|svg)$/,
         use: [
           {
             loader: 'cache-loader',
@@ -81,8 +87,9 @@ const config: object = {
             }
           },
           {
-            loader: 'file-loader',
+            loader: 'url-loader',
             options: {
+              limit: 15000,
               name: '[path][name].[hash:8].[ext]'
             }
           },
@@ -116,13 +123,18 @@ const config: object = {
   },
   output: {
     filename: 'js/[name].[chunkhash:8].js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
     external,
     internal,
     new CleanWebpackPlugin(['./dist/**/*']),
-    new ForkTsCheckerWebpackPlugin(),
+    new HappyPack(merge(styles, {
+      id: 'external'
+    })),
+    new HappyPack(merge(styles, {
+      id: 'internal'
+    })),
     new HappyPack({
       id: 'scripts',
       loaders: [
@@ -131,18 +143,13 @@ const config: object = {
         {
           loader: 'ts-loader',
           options: {
-            happyPackMode: true
+            happyPackMode: true,
+            transpileOnly: true
           }
         }
       ],
       threadPool: happyThreadPool
     }),
-    new HappyPack(merge(styles, {
-      id: 'external'
-    })),
-    new HappyPack(merge(styles, {
-      id: 'internal'
-    })),
     new HardSourceWebpackPlugin({
       cacheDirectory: path.resolve(__dirname, '.cache/hard-source/prod/[confighash]'),
       configHash: function(webpackConfig: object) {
@@ -154,6 +161,7 @@ const config: object = {
           stylelintConfig: stylelintConfig,
           tsconfig: tsconfig,
           tslint: tslint,
+          webpackCommon: common,
           webpackConfig: webpackConfig
         });
       },

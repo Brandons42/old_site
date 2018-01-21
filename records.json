@@ -31,7 +31,7 @@
         "byName": {},
         "byBlocks": {},
         "usedIds": {
-          "0": 0
+          "1": 1
         }
       }
     }
@@ -210,7 +210,13 @@
       "node_modules/happypack/loader.js?{\"id\":\"external\"}!sass/modules/home.sass": 148,
       "node_modules/file-loader/dist/cjs.js??ref--5-0!node_modules/image-webpack-loader/index.js??ref--5-1!img/title-background.jpg": 149,
       "node_modules/css-loader/lib/url/escape.js": 150,
-      "node_modules/cache-loader/dist/cjs.js??ref--5-0!node_modules/file-loader/dist/cjs.js??ref--5-1!node_modules/image-webpack-loader/index.js??ref--5-2!img/title-background.jpg": 151
+      "node_modules/cache-loader/dist/cjs.js??ref--5-0!node_modules/file-loader/dist/cjs.js??ref--5-1!node_modules/image-webpack-loader/index.js??ref--5-2!img/title-background.jpg": 151,
+      "node_modules/cache-loader/dist/cjs.js??ref--5-0!node_modules/url-loader/index.js??ref--5-1!node_modules/image-webpack-loader/index.js??ref--5-2!img/title-background.jpg": 152,
+      "node_modules/extract-text-webpack-plugin/dist/loader.js??ref--2-0!node_modules/style-loader/index.js!node_modules/happypack/loader.js??ref--2-2!sass/global/temporary.critical.sass": 153,
+      "node_modules/happypack/loader.js??ref--0!tsx/App.tsx": 154,
+      "node_modules/happypack/loader.js??ref--0!tsx/Home.tsx": 155,
+      "node_modules/happypack/loader.js??ref--0!tsx/Nav.tsx": 156,
+      "node_modules/cache-loader/dist/cjs.js??ref--4-0!node_modules/url-loader/index.js??ref--4-1!node_modules/image-webpack-loader/index.js??ref--4-2!img/title-background.jpg": 157
     },
     "usedIds": {
       "0": 0,
@@ -364,7 +370,13 @@
       "148": 148,
       "149": 149,
       "150": 150,
-      "151": 151
+      "151": 151,
+      "152": 152,
+      "153": 153,
+      "154": 154,
+      "155": 155,
+      "156": 156,
+      "157": 157
     }
   },
   "chunks": {
@@ -498,7 +510,7 @@
         "byName": {},
         "byBlocks": {},
         "usedIds": {
-          "1": 1
+          "0": 0
         }
       }
     }
@@ -569,11 +581,13 @@
       "modules": {
         "byIdentifier": {
           "node_modules/happypack/loader.js?{\"id\":\"styles\"}!sass/global/main.sass": 0,
-          "node_modules/css-loader/lib/css-base.js": 1
+          "node_modules/css-loader/lib/css-base.js": 1,
+          "node_modules/happypack/loader.js?{\"id\":\"external\"}!sass/global/main.sass": 2
         },
         "usedIds": {
           "0": 0,
-          "1": 1
+          "1": 1,
+          "2": 2
         }
       },
       "chunks": {
@@ -591,12 +605,18 @@
         "byIdentifier": {
           "node_modules/happypack/loader.js?{\"id\":\"styles\"}!sass/modules/home.sass": 0,
           "node_modules/css-loader/lib/css-base.js": 1,
-          "node_modules/file-loader/dist/cjs.js??ref--4-0!node_modules/image-webpack-loader/index.js??ref--4-1!img/title-background.jpg": 2
+          "node_modules/file-loader/dist/cjs.js??ref--4-0!node_modules/image-webpack-loader/index.js??ref--4-1!img/title-background.jpg": 2,
+          "node_modules/happypack/loader.js?{\"id\":\"external\"}!sass/modules/home.sass": 3,
+          "node_modules/css-loader/lib/url/escape.js": 4,
+          "node_modules/cache-loader/dist/cjs.js??ref--4-0!node_modules/url-loader/index.js??ref--4-1!node_modules/image-webpack-loader/index.js??ref--4-2!img/title-background.jpg": 5
         },
         "usedIds": {
           "0": 0,
           "1": 1,
-          "2": 2
+          "2": 2,
+          "3": 3,
+          "4": 4,
+          "5": 5
         }
       },
       "chunks": {
@@ -626,7 +646,7 @@
         "byName": {},
         "byBlocks": {},
         "usedIds": {
-          "0": 0
+          "1": 1
         }
       }
     }
@@ -639,21 +659,23 @@
           "node_modules/css-loader/lib/css-base.js": 1,
           "node_modules/file-loader/dist/cjs.js??ref--5-0!node_modules/image-webpack-loader/index.js??ref--5-1!img/title-background.jpg": 2,
           "node_modules/css-loader/lib/url/escape.js": 3,
-          "node_modules/cache-loader/dist/cjs.js??ref--5-0!node_modules/file-loader/dist/cjs.js??ref--5-1!node_modules/image-webpack-loader/index.js??ref--5-2!img/title-background.jpg": 4
+          "node_modules/cache-loader/dist/cjs.js??ref--5-0!node_modules/file-loader/dist/cjs.js??ref--5-1!node_modules/image-webpack-loader/index.js??ref--5-2!img/title-background.jpg": 4,
+          "node_modules/cache-loader/dist/cjs.js??ref--5-0!node_modules/url-loader/index.js??ref--5-1!node_modules/image-webpack-loader/index.js??ref--5-2!img/title-background.jpg": 5
         },
         "usedIds": {
           "0": 0,
           "1": 1,
           "2": 2,
           "3": 3,
-          "4": 4
+          "4": 4,
+          "5": 5
         }
       },
       "chunks": {
         "byName": {},
         "byBlocks": {},
         "usedIds": {
-          "1": 1
+          "0": 0
         }
       }
     }
@@ -663,6 +685,27 @@
       "modules": {
         "byIdentifier": {
           "node_modules/happypack/loader.js?{\"id\":\"external\"}!sass/global/main.sass": 0,
+          "node_modules/css-loader/lib/css-base.js": 1
+        },
+        "usedIds": {
+          "0": 0,
+          "1": 1
+        }
+      },
+      "chunks": {
+        "byName": {},
+        "byBlocks": {},
+        "usedIds": {
+          "0": 0
+        }
+      }
+    }
+  ],
+  "extract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/happypack/loader.js??ref--2-2!sass/global/temporary.critical.sass": [
+    {
+      "modules": {
+        "byIdentifier": {
+          "node_modules/happypack/loader.js?{\"id\":\"internal\"}!sass/global/temporary.critical.sass": 0,
           "node_modules/css-loader/lib/css-base.js": 1
         },
         "usedIds": {

@@ -4,6 +4,7 @@ import * as webpack from 'webpack';
 
 import * as DuplicatePackageCheckerPlugin from 'duplicate-package-checker-webpack-plugin';
 import * as FaviconsWebpackPlugin from 'favicons-webpack-plugin';
+import * as ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import * as HappyPack from 'happypack';
 import * as HtmlWebpackPlugin from 'html-webpack-plugin';
 import * as HtmlWebpackInlineSVGPlugin from 'html-webpack-inline-svg-plugin';
@@ -12,24 +13,17 @@ import * as OptimizeJsPlugin from 'optimize-js-plugin';
 import * as ResourceHintsWebpackPlugin from 'resource-hints-webpack-plugin';
 import * as UgilfyJsPlugin from 'uglifyjs-webpack-plugin';
 
-export const happyThreadPool: object = HappyPack.ThreadPool({ size: 4 });
+export const happyThreadPool: object = HappyPack.ThreadPool({ size: 8 });
 
 export const common: object = {
-  entry: {
-    app: [
-      path.resolve(__dirname, 'sass/global/main.sass'),
-      path.resolve(__dirname, 'sass/global/temporary.critical.sass'),
-      path.resolve(__dirname, 'tsx/App.tsx')
-    ]
-  },
   module: {
     rules: [
-      {
+      /*{
         enforce: 'pre',
         exclude: /^node_modules$/,
         loader: 'tslint-loader',
         test: /\.tsx?$/
-      },
+      },*/
       {
         exclude: /^node_modules$/,
         test: /\.tsx?$/,
@@ -53,6 +47,10 @@ export const common: object = {
   plugins: [
     new DuplicatePackageCheckerPlugin(),
     new FaviconsWebpackPlugin('./img/temporary-favicon.png'),
+    new ForkTsCheckerWebpackPlugin({
+      checkSyntacticErrors: true,
+      tslint: true
+    }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       minify: {
@@ -80,7 +78,7 @@ export const common: object = {
   ],
   resolve: {
     alias: {
-      img: path.resolve(process.cwd(), 'img'),
+      //img: path.resolve(process.cwd(), 'img'),
       sass: path.resolve(process.cwd(), 'sass/modules')
     },
     extensions: [
