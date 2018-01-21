@@ -1,15 +1,20 @@
+/// <reference path="./typings.d.ts"/>
 //import babelrc from './.babelrc';
+//import browserslistrc from './.browserslistrc';
 import { common, happyThreadPool } from './webpack.common';
 //import * as manifest from './vendor-manifest.json';
 import * as merge from 'webpack-merge';
-//import * as objectHash from 'node-object-hash';
+import * as objectHash from 'node-object-hash';
 import * as path from 'path';
-//import * as postcssConfig from './postcss.config.js';
-//import * as tsConfig from './tsconfig.json';
+import * as postcssConfig from './postcss.config';
+import * as posthtmlConfig from './posthtml.config';
+import * as stylelintConfig from './.stylelintrc.json';
+import * as tsconfig from './tsconfig.json';
+import * as tslint from './tslint.json';
 import * as webpack from 'webpack';
 
 import * as HappyPack from 'happypack';
-//import * as HardSourceWebpackPlugin from 'hard-source-webpack-plugin';
+import * as HardSourceWebpackPlugin from 'hard-source-webpack-plugin';
 
 export default merge(common, {
   devServer: {
@@ -134,16 +139,21 @@ export default merge(common, {
       ],
       threadPool: happyThreadPool
     }),
-    /*new HardSourceWebpackPlugin({
-      cacheDirectory: 'node_modules/.cache/hard-source/dev/[confighash]',
+    new HardSourceWebpackPlugin({
+      cacheDirectory: path.resolve(__dirname, '.cache/hard-source/dev/[confighash]'),
       configHash: function(webpackConfig: object) {
-        const hashed: object = {
+        return objectHash({sort: false}).hash({
+          //babelrc: babelrc,
+          //browserslistrc: browserslistrc,
           postcssConfig: postcssConfig,
+          posthtmlConfig: posthtmlConfig,
+          stylelintConfig: stylelintConfig,
+          tsconfig: tsconfig,
+          tslint: tslint,
           webpackConfig: webpackConfig
-        };
-        return objectHash({sort: false}).hash(webpackConfig);
+        });
       }
-    }),*/
+    }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development')
     }),
