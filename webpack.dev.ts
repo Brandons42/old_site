@@ -47,7 +47,12 @@ export default merge(common, {
         exclude: /^node_modules$/,
         test: /\.(png|jpe?g|gif)$/,
         use: [
-          //'cache-loader',
+          {
+            loader: 'cache-loader',
+            options: {
+              cacheDirectory: path.resolve(__dirname, '.cache/cache-loader/prod')
+            }
+          },
           {
             loader: 'file-loader',
             options: {
@@ -152,6 +157,11 @@ export default merge(common, {
           tslint: tslint,
           webpackConfig: webpackConfig
         });
+      },
+      environmentHash: {
+        directories: [],
+        files: ['yarn.lock'],
+        root: process.cwd()
       }
     }),
     new webpack.DefinePlugin({

@@ -74,7 +74,12 @@ const config: object = {
         exclude: /^node_modules$/,
         test: /\.(png|jpe?g|gif)$/,
         use: [
-          //'cache-loader',
+          {
+            loader: 'cache-loader',
+            options: {
+              cacheDirectory: path.resolve(__dirname, '.cache/cache-loader/prod')
+            }
+          },
           {
             loader: 'file-loader',
             options: {
