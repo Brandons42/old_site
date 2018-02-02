@@ -16,7 +16,19 @@ import * as UgilfyJsPlugin from 'uglifyjs-webpack-plugin';
 export const happyThreadPool: object = HappyPack.ThreadPool({ size: 8 });
 
 export const common: object = {
+  entry: {
+    app: [
+      'normalize.css',
+      path.resolve(__dirname, 'sass/global/main.sass'),
+      path.resolve(__dirname, 'sass/global/temporary.critical.sass'),
+      path.resolve(__dirname, 'tsx/App.tsx')
+    ]
+  },
   module: {
+    /*noParse: [
+      /react/ //,
+      ///react-dom/
+    ],*/
     rules: [
       /*{
         enforce: 'pre',
@@ -41,7 +53,16 @@ export const common: object = {
           'pug-loader',
           'posthtml-loader'
         ]
-      }
+      },
+      {
+        test: /\.css$/,
+        use: {
+          loader: 'happypack/loader',
+          options: {
+            id: 'css'
+          }
+        }
+      },
     ]
   },
   plugins: [
@@ -50,6 +71,13 @@ export const common: object = {
     new ForkTsCheckerWebpackPlugin({
       checkSyntacticErrors: true,
       tslint: true
+    }),
+    new HappyPack({
+      id: 'css',
+      loaders: [
+        'style-loader',
+        'css-loader'
+      ]
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
@@ -79,6 +107,7 @@ export const common: object = {
   resolve: {
     alias: {
       //img: path.resolve(process.cwd(), 'img'),
+      //react-dom: path.resolve(process.cwd(), 'node_modules/react-dom/dist/react-dom.min.js'),
       sass: path.resolve(process.cwd(), 'sass/modules')
     },
     extensions: [

@@ -16,14 +16,14 @@
           "1": 1
         }
       },
-      "prepreHash": "e0bf3de9d36c7775ae88",
-      "preHash": "824cbd10b71b16e7e136",
-      "hash": "992a0b1371dca6756214",
+      "prepreHash": "952b81a4f01470658f07",
+      "preHash": "1250de0bb8c557acff77",
+      "hash": "2de34605d1effc866453",
       "moduleHashs": {
-        "/Users/BrandonSuen/code/Web/site/node_modules/favicons-webpack-plugin/lib/favicons.js?{\"outputFilePrefix\":\"icons-[hash]/\",\"icons\":{\"android\":true,\"appleIcon\":true,\"appleStartup\":true,\"coast\":false,\"favicons\":true,\"firefox\":true,\"opengraph\":false,\"twitter\":false,\"yandex\":false,\"windows\":false},\"background\":\"#fff\",\"persistentCache\":true,\"appName\":\"site\"}!/Users/BrandonSuen/code/Web/site/img/temporary-favicon.png": "d386162a96b908c8d17c180c7cd2cf52"
+        "/Users/BrandonSuen/code/Web/site/node_modules/favicons-webpack-plugin/lib/favicons.js?{\"outputFilePrefix\":\"icons-[hash]/\",\"icons\":{\"android\":true,\"appleIcon\":true,\"appleStartup\":true,\"coast\":false,\"favicons\":true,\"firefox\":true,\"opengraph\":false,\"twitter\":false,\"yandex\":false,\"windows\":false},\"background\":\"#fff\",\"persistentCache\":true,\"appName\":\"site\"}!/Users/BrandonSuen/code/Web/site/img/temporary-favicon.png": "aba55d364499cdc8983cffb517e10789"
       },
       "chunkHashs": {
-        "1": "193fc888e058cf5892596df4ddee7806"
+        "1": "b6787ab4ee7d585398dc75c99fd8cc81"
       },
       "chunkModuleIds": {
         "1": [
@@ -53,9 +53,9 @@
           "1": 1
         }
       },
-      "prepreHash": "5d92383b6a5e1260b965",
+      "prepreHash": "93dcf6e71f88bf49f281",
       "preHash": "5a935bc91abe0e31b918",
-      "hash": "88fb3fac84e23e338737",
+      "hash": "6dccd9fa3fcb1516803d",
       "moduleHashs": {
         "/Users/BrandonSuen/code/Web/site/node_modules/html-webpack-plugin/lib/loader.js!/Users/BrandonSuen/code/Web/site/node_modules/pug-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/posthtml-loader/lib/index.js!/Users/BrandonSuen/code/Web/site/index.pug": "ba0dac933fd0fa9875aec2e09cb0a81d",
         "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/pug-runtime/index.js": "f90df1b353c11a1d9ce1102e469bbb85",
@@ -250,14 +250,14 @@
       "0": 0
     }
   },
-  "prepreHash": "69da06e143c66da6940a",
-  "preHash": "913ec1ab526ec08d1bd9",
-  "hash": "b3147f93df9cae7ef367",
+  "prepreHash": "7991feee3d14c971b1fb",
+  "preHash": "69ca65e81c83855d2b9b",
+  "hash": "ec7414439cedb54ecae2",
   "moduleHashs": {
     "/Users/BrandonSuen/code/Web/site/node_modules/cache-loader/dist/cjs.js??ref--4-0!/Users/BrandonSuen/code/Web/site/node_modules/url-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/image-webpack-loader/index.js??ref--4-2!/Users/BrandonSuen/code/Web/site/img/title-background.jpg": "fb8a1f8617936fdfaaf18c4ed8b39db9",
     "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/ansi-html/index.js": "d4884b93e1103894ba2bd76274e7786c",
     "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/ansi-regex/index.js": "2657ef9aa9720fc23f77bab495e49654",
-    "/Users/BrandonSuen/code/Web/site/node_modules/css-loader/index.js?{\"alias\":{},\"importLoaders\":2}!/Users/BrandonSuen/code/Web/site/node_modules/postcss-loader/lib/index.js?{}!/Users/BrandonSuen/code/Web/site/node_modules/sass-loader/lib/loader.js?{\"includePaths\":[]}!/Users/BrandonSuen/code/Web/site/sass/global/main.sass": "4fd9d406868eb04dd4fd0b2da1a89671",
+    "/Users/BrandonSuen/code/Web/site/node_modules/css-loader/index.js?{\"alias\":{},\"importLoaders\":2}!/Users/BrandonSuen/code/Web/site/node_modules/postcss-loader/lib/index.js?{}!/Users/BrandonSuen/code/Web/site/node_modules/sass-loader/lib/loader.js?{\"includePaths\":[]}!/Users/BrandonSuen/code/Web/site/sass/global/main.sass": "53689f31c8cc94ade0974d10f50d4d5f",
     "/Users/BrandonSuen/code/Web/site/node_modules/css-loader/index.js?{\"alias\":{},\"importLoaders\":2}!/Users/BrandonSuen/code/Web/site/node_modules/postcss-loader/lib/index.js?{}!/Users/BrandonSuen/code/Web/site/node_modules/sass-loader/lib/loader.js?{\"includePaths\":[]}!/Users/BrandonSuen/code/Web/site/sass/global/temporary.critical.sass": "bd1f8c944fee0cc520886b00ddc8b5a6",
     "/Users/BrandonSuen/code/Web/site/node_modules/css-loader/index.js?{\"alias\":{},\"importLoaders\":2}!/Users/BrandonSuen/code/Web/site/node_modules/postcss-loader/lib/index.js?{}!/Users/BrandonSuen/code/Web/site/node_modules/sass-loader/lib/loader.js?{\"includePaths\":[]}!/Users/BrandonSuen/code/Web/site/sass/modules/home.sass": "bfef411058d2012f2f473122f7132413",
     "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/css-loader/lib/css-base.js": "feee2a24dc85152980dbac6680fe3914",
@@ -337,7 +337,7 @@
     "/Users/BrandonSuen/code/Web/site/node_modules/happypack/loader.js??ref--0!/Users/BrandonSuen/code/Web/site/tsx/Nav.tsx": "2e2a9eb8dfec9ee51ce5cd8dbd2e112d"
   },
   "chunkHashs": {
-    "0": "4ad60b68ce908dfd451250f53e400047"
+    "0": "8e4689ed34744ac0877b5cdcf384f42b"
   },
   "chunkModuleIds": {
     "0": [

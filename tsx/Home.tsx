@@ -8,7 +8,7 @@ export class Home extends React.Component {
       <div>
         <header className='header'>
           <h1 className='title'>
-            Brandon Suen!
+            Brandon Suen
           </h1>
         </header>
       </div>

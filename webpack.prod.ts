@@ -41,13 +41,6 @@ const styles: object = {
 };
 
 const config: object = {
-  entry: {
-    app: [
-      path.resolve(__dirname, 'sass/global/main.sass'),
-      path.resolve(__dirname, 'sass/global/temporary.critical.sass'),
-      path.resolve(__dirname, 'tsx/App.tsx')
-    ]
-  },
   module: {
     rules: [
       {
@@ -62,6 +55,12 @@ const config: object = {
             }
           }
         })
+        /*use: {
+          loader: 'happypack/loader',
+          options: {
+            id: 'internal'
+          }
+        }*/
       },
       {
         exclude: /(node_modules|\.critical\.sass)$/,
@@ -135,6 +134,22 @@ const config: object = {
     new HappyPack(merge(styles, {
       id: 'internal'
     })),
+    /*new HappyPack({
+      id: 'internal',
+      loaders: [
+        //'cache-loader',
+        'style-loader',
+        {
+          loader: 'css-loader',
+          options: {
+            importLoaders: 2
+          }
+        },
+        'postcss-loader',
+        'sass-loader'
+      ],
+      threadPool: happyThreadPool
+    }),*/
     new HappyPack({
       id: 'scripts',
       loaders: [
@@ -197,7 +212,12 @@ const config: object = {
       'process.env.NODE_ENV': JSON.stringify('production')
     })
   ],
-  recordsPath: path.resolve(__dirname, 'records.json')
+  recordsPath: path.resolve(__dirname, 'records.json'),
+  resolve: {
+    alias: {
+      //react$: path.resolve(process.cwd(), 'node_modules/react/dist/react.production.min.js')
+    }
+  }
 };
 
 export { config as production };

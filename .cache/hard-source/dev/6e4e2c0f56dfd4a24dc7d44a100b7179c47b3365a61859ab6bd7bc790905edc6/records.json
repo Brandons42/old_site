@@ -1,0 +1,287 @@
+{
+  "favicons-webpack-plugin for \"iconstats-[hash].json\"": [
+    {
+      "modules": {
+        "byIdentifier": {
+          "node_modules/favicons-webpack-plugin/lib/favicons.js?{\"outputFilePrefix\":\"icons-[hash]/\",\"icons\":{\"android\":true,\"appleIcon\":true,\"appleStartup\":true,\"coast\":false,\"favicons\":true,\"firefox\":true,\"opengraph\":false,\"twitter\":false,\"yandex\":false,\"windows\":false},\"background\":\"#fff\",\"persistentCache\":true,\"appName\":\"site\"}!img/temporary-favicon.png": "./node_modules/favicons-webpack-plugin/lib/favicons.js?{\"outputFilePrefix\":\"icons-[hash]/\",\"icons\":{\"android\":true,\"appleIcon\":true,\"appleStartup\":true,\"coast\":false,\"favicons\":true,\"firefox\":true,\"opengraph\":false,\"twitter\":false,\"yandex\":false,\"windows\":false},\"background\":\"#fff\",\"persistentCache\":true,\"appName\":\"site\"}!./img/temporary-favicon.png"
+        },
+        "usedIds": {
+          "./node_modules/favicons-webpack-plugin/lib/favicons.js?{\"outputFilePrefix\":\"icons-[hash]/\",\"icons\":{\"android\":true,\"appleIcon\":true,\"appleStartup\":true,\"coast\":false,\"favicons\":true,\"firefox\":true,\"opengraph\":false,\"twitter\":false,\"yandex\":false,\"windows\":false},\"background\":\"#fff\",\"persistentCache\":true,\"appName\":\"site\"}!./img/temporary-favicon.png": "./node_modules/favicons-webpack-plugin/lib/favicons.js?{\"outputFilePrefix\":\"icons-[hash]/\",\"icons\":{\"android\":true,\"appleIcon\":true,\"appleStartup\":true,\"coast\":false,\"favicons\":true,\"firefox\":true,\"opengraph\":false,\"twitter\":false,\"yandex\":false,\"windows\":false},\"background\":\"#fff\",\"persistentCache\":true,\"appName\":\"site\"}!./img/temporary-favicon.png"
+        }
+      },
+      "chunks": {
+        "byName": {},
+        "byBlocks": {},
+        "usedIds": {
+          "0": 0
+        }
+      },
+      "prepreHash": "x",
+      "preHash": "45007a2f9b3ea11d3dcf",
+      "hash": "f70d0d5d9a8262524aa1",
+      "moduleHashs": {
+        "/Users/BrandonSuen/code/Web/site/node_modules/favicons-webpack-plugin/lib/favicons.js?{\"outputFilePrefix\":\"icons-[hash]/\",\"icons\":{\"android\":true,\"appleIcon\":true,\"appleStartup\":true,\"coast\":false,\"favicons\":true,\"firefox\":true,\"opengraph\":false,\"twitter\":false,\"yandex\":false,\"windows\":false},\"background\":\"#fff\",\"persistentCache\":true,\"appName\":\"site\"}!/Users/BrandonSuen/code/Web/site/img/temporary-favicon.png": "90446e90e911abbe110fa49a40ae1a47"
+      },
+      "chunkHashs": {
+        "0": "9f22a1d434d45e2f9dc2920ec881b14a"
+      },
+      "chunkModuleIds": {
+        "0": [
+          "./node_modules/favicons-webpack-plugin/lib/favicons.js?{\"outputFilePrefix\":\"icons-[hash]/\",\"icons\":{\"android\":true,\"appleIcon\":true,\"appleStartup\":true,\"coast\":false,\"favicons\":true,\"firefox\":true,\"opengraph\":false,\"twitter\":false,\"yandex\":false,\"windows\":false},\"background\":\"#fff\",\"persistentCache\":true,\"appName\":\"site\"}!./img/temporary-favicon.png"
+        ]
+      }
+    }
+  ],
+  "html-webpack-plugin for \"index.html\"": [
+    {
+      "modules": {
+        "byIdentifier": {
+          "node_modules/html-webpack-plugin/lib/loader.js!node_modules/pug-loader/index.js!node_modules/posthtml-loader/lib/index.js!index.pug": "./node_modules/html-webpack-plugin/lib/loader.js!./index.pug",
+          "node_modules/source-map-loader/index.js!node_modules/pug-runtime/index.js": "./node_modules/pug-runtime/index.js",
+          "external \"fs\"": "fs"
+        },
+        "usedIds": {
+          "./node_modules/html-webpack-plugin/lib/loader.js!./index.pug": "./node_modules/html-webpack-plugin/lib/loader.js!./index.pug",
+          "./node_modules/pug-runtime/index.js": "./node_modules/pug-runtime/index.js",
+          "fs": "fs"
+        }
+      },
+      "chunks": {
+        "byName": {},
+        "byBlocks": {},
+        "usedIds": {
+          "0": 0
+        }
+      },
+      "prepreHash": "x",
+      "preHash": "3a4b41cf6a2135c0976b",
+      "hash": "6e84c382de0075de4a53",
+      "moduleHashs": {
+        "/Users/BrandonSuen/code/Web/site/node_modules/html-webpack-plugin/lib/loader.js!/Users/BrandonSuen/code/Web/site/node_modules/pug-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/posthtml-loader/lib/index.js!/Users/BrandonSuen/code/Web/site/index.pug": "ba0dac933fd0fa9875aec2e09cb0a81d",
+        "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/pug-runtime/index.js": "f90df1b353c11a1d9ce1102e469bbb85",
+        "external \"fs\"": "c8a42e464c9564ae5b0288a864472ec4"
+      },
+      "chunkHashs": {
+        "0": "b3f5f53ff3adbacafb641c605d5d4a4b"
+      },
+      "chunkModuleIds": {
+        "0": [
+          "./node_modules/html-webpack-plugin/lib/loader.js!./index.pug",
+          "./node_modules/pug-runtime/index.js",
+          "fs"
+        ]
+      }
+    }
+  ],
+  "modules": {
+    "byIdentifier": {
+      "node_modules/cache-loader/dist/cjs.js??ref--5-0!node_modules/url-loader/index.js!node_modules/image-webpack-loader/index.js??ref--5-2!img/title-background.jpg": "./img/title-background.jpg",
+      "node_modules/source-map-loader/index.js!node_modules/ansi-html/index.js": "./node_modules/ansi-html/index.js",
+      "node_modules/source-map-loader/index.js!node_modules/ansi-regex/index.js": "./node_modules/ansi-regex/index.js",
+      "node_modules/css-loader/index.js!node_modules/normalize.css/normalize.css": "./node_modules/css-loader/index.js!./node_modules/normalize.css/normalize.css",
+      "node_modules/css-loader/index.js?{\"alias\":{},\"importLoaders\":2}!node_modules/postcss-loader/lib/index.js?{}!node_modules/sass-loader/lib/loader.js?{\"includePaths\":[]}!sass/global/main.sass": "./node_modules/css-loader/index.js?{\"alias\":{},\"importLoaders\":2}!./node_modules/postcss-loader/lib/index.js?{}!./node_modules/sass-loader/lib/loader.js?{\"includePaths\":[]}!./sass/global/main.sass",
+      "node_modules/css-loader/index.js?{\"alias\":{},\"importLoaders\":2}!node_modules/postcss-loader/lib/index.js?{}!node_modules/sass-loader/lib/loader.js?{\"includePaths\":[]}!sass/global/temporary.critical.sass": "./node_modules/css-loader/index.js?{\"alias\":{},\"importLoaders\":2}!./node_modules/postcss-loader/lib/index.js?{}!./node_modules/sass-loader/lib/loader.js?{\"includePaths\":[]}!./sass/global/temporary.critical.sass",
+      "node_modules/css-loader/index.js?{\"alias\":{},\"importLoaders\":2}!node_modules/postcss-loader/lib/index.js?{}!node_modules/sass-loader/lib/loader.js?{\"includePaths\":[]}!sass/modules/home.sass": "./node_modules/css-loader/index.js?{\"alias\":{},\"importLoaders\":2}!./node_modules/postcss-loader/lib/index.js?{}!./node_modules/sass-loader/lib/loader.js?{\"includePaths\":[]}!./sass/modules/home.sass",
+      "node_modules/source-map-loader/index.js!node_modules/css-loader/lib/css-base.js": "./node_modules/css-loader/lib/css-base.js",
+      "node_modules/source-map-loader/index.js!node_modules/css-loader/lib/url/escape.js": "./node_modules/css-loader/lib/url/escape.js",
+      "node_modules/source-map-loader/index.js!node_modules/events/events.js": "./node_modules/events/events.js",
+      "node_modules/source-map-loader/index.js!node_modules/html-entities/index.js": "./node_modules/html-entities/index.js",
+      "node_modules/source-map-loader/index.js!node_modules/html-entities/lib/html4-entities.js": "./node_modules/html-entities/lib/html4-entities.js",
+      "node_modules/source-map-loader/index.js!node_modules/html-entities/lib/html5-entities.js": "./node_modules/html-entities/lib/html5-entities.js",
+      "node_modules/source-map-loader/index.js!node_modules/html-entities/lib/xml-entities.js": "./node_modules/html-entities/lib/xml-entities.js",
+      "node_modules/source-map-loader/index.js!node_modules/loglevel/lib/loglevel.js": "./node_modules/loglevel/lib/loglevel.js",
+      "node_modules/happypack/loader.js??ref--2!node_modules/normalize.css/normalize.css": "./node_modules/normalize.css/normalize.css",
+      "node_modules/source-map-loader/index.js!node_modules/punycode/punycode.js": "./node_modules/punycode/punycode.js",
+      "node_modules/source-map-loader/index.js!node_modules/querystring-es3/decode.js": "./node_modules/querystring-es3/decode.js",
+      "node_modules/source-map-loader/index.js!node_modules/querystring-es3/encode.js": "./node_modules/querystring-es3/encode.js",
+      "node_modules/source-map-loader/index.js!node_modules/querystring-es3/index.js": "./node_modules/querystring-es3/index.js",
+      "node_modules/source-map-loader/index.js!node_modules/react-dom/index.js": "./node_modules/react-dom/index.js",
+      "node_modules/source-map-loader/index.js!node_modules/react-router-dom/es/index.js": "./node_modules/react-router-dom/es/index.js",
+      "node_modules/source-map-loader/index.js!node_modules/react/cjs/react.development.js": "./node_modules/react/cjs/react.development.js",
+      "node_modules/source-map-loader/index.js!node_modules/sockjs-client/dist/sockjs.js": "./node_modules/sockjs-client/dist/sockjs.js",
+      "node_modules/source-map-loader/index.js!node_modules/strip-ansi/index.js": "./node_modules/strip-ansi/index.js",
+      "node_modules/source-map-loader/index.js!node_modules/style-loader/lib/addStyles.js": "./node_modules/style-loader/lib/addStyles.js",
+      "node_modules/source-map-loader/index.js!node_modules/style-loader/lib/urls.js": "./node_modules/style-loader/lib/urls.js",
+      "node_modules/source-map-loader/index.js!node_modules/url/url.js": "./node_modules/url/url.js",
+      "node_modules/source-map-loader/index.js!node_modules/url/util.js": "./node_modules/url/util.js",
+      "node_modules/source-map-loader/index.js!node_modules/webpack-dev-server/client/index.js?http:/localhost:8080": "./node_modules/webpack-dev-server/client/index.js?http://localhost:8080",
+      "node_modules/source-map-loader/index.js!node_modules/webpack-dev-server/client/overlay.js": "./node_modules/webpack-dev-server/client/overlay.js",
+      "multi node_modules/webpack-dev-server/client/index.js?http:/localhost:8080 webpack/hot/dev-server normalize.css sass/global/main.sass sass/global/temporary.critical.sass tsx/App.tsx": 0,
+      "node_modules/source-map-loader/index.js!node_modules/webpack-dev-server/client/socket.js": "./node_modules/webpack-dev-server/client/socket.js",
+      "node_modules/source-map-loader/index.js!node_modules/webpack/buildin/global.js": "./node_modules/webpack/buildin/global.js",
+      "node_modules/source-map-loader/index.js!node_modules/webpack/buildin/module.js": "./node_modules/webpack/buildin/module.js",
+      "node_modules/webpack/hot nonrecursive ../../../../../^/.//log$": "./node_modules/webpack/hot ^\\.\\/log$",
+      "node_modules/source-map-loader/index.js!node_modules/webpack/hot/dev-server.js": "./node_modules/webpack/hot/dev-server.js",
+      "node_modules/source-map-loader/index.js!node_modules/webpack/hot/emitter.js": "./node_modules/webpack/hot/emitter.js",
+      "node_modules/source-map-loader/index.js!node_modules/webpack/hot/log-apply-result.js": "./node_modules/webpack/hot/log-apply-result.js",
+      "node_modules/source-map-loader/index.js!node_modules/webpack/hot/log.js": "./node_modules/webpack/hot/log.js",
+      "node_modules/happypack/loader.js??ref--4-0!sass/global/main.sass": "./sass/global/main.sass",
+      "node_modules/happypack/loader.js??ref--4-0!sass/global/temporary.critical.sass": "./sass/global/temporary.critical.sass",
+      "node_modules/happypack/loader.js??ref--4-0!sass/modules/home.sass": "./sass/modules/home.sass",
+      "node_modules/happypack/loader.js??ref--0!tsx/App.tsx": "./tsx/App.tsx",
+      "node_modules/happypack/loader.js??ref--0!tsx/Home.tsx": "./tsx/Home.tsx",
+      "node_modules/happypack/loader.js??ref--0!tsx/Nav.tsx": "./tsx/Nav.tsx"
+    },
+    "usedIds": {
+      "0": 0,
+      "./img/title-background.jpg": "./img/title-background.jpg",
+      "./node_modules/ansi-html/index.js": "./node_modules/ansi-html/index.js",
+      "./node_modules/ansi-regex/index.js": "./node_modules/ansi-regex/index.js",
+      "./node_modules/css-loader/index.js!./node_modules/normalize.css/normalize.css": "./node_modules/css-loader/index.js!./node_modules/normalize.css/normalize.css",
+      "./node_modules/css-loader/index.js?{\"alias\":{},\"importLoaders\":2}!./node_modules/postcss-loader/lib/index.js?{}!./node_modules/sass-loader/lib/loader.js?{\"includePaths\":[]}!./sass/global/main.sass": "./node_modules/css-loader/index.js?{\"alias\":{},\"importLoaders\":2}!./node_modules/postcss-loader/lib/index.js?{}!./node_modules/sass-loader/lib/loader.js?{\"includePaths\":[]}!./sass/global/main.sass",
+      "./node_modules/css-loader/index.js?{\"alias\":{},\"importLoaders\":2}!./node_modules/postcss-loader/lib/index.js?{}!./node_modules/sass-loader/lib/loader.js?{\"includePaths\":[]}!./sass/global/temporary.critical.sass": "./node_modules/css-loader/index.js?{\"alias\":{},\"importLoaders\":2}!./node_modules/postcss-loader/lib/index.js?{}!./node_modules/sass-loader/lib/loader.js?{\"includePaths\":[]}!./sass/global/temporary.critical.sass",
+      "./node_modules/css-loader/index.js?{\"alias\":{},\"importLoaders\":2}!./node_modules/postcss-loader/lib/index.js?{}!./node_modules/sass-loader/lib/loader.js?{\"includePaths\":[]}!./sass/modules/home.sass": "./node_modules/css-loader/index.js?{\"alias\":{},\"importLoaders\":2}!./node_modules/postcss-loader/lib/index.js?{}!./node_modules/sass-loader/lib/loader.js?{\"includePaths\":[]}!./sass/modules/home.sass",
+      "./node_modules/css-loader/lib/css-base.js": "./node_modules/css-loader/lib/css-base.js",
+      "./node_modules/css-loader/lib/url/escape.js": "./node_modules/css-loader/lib/url/escape.js",
+      "./node_modules/events/events.js": "./node_modules/events/events.js",
+      "./node_modules/html-entities/index.js": "./node_modules/html-entities/index.js",
+      "./node_modules/html-entities/lib/html4-entities.js": "./node_modules/html-entities/lib/html4-entities.js",
+      "./node_modules/html-entities/lib/html5-entities.js": "./node_modules/html-entities/lib/html5-entities.js",
+      "./node_modules/html-entities/lib/xml-entities.js": "./node_modules/html-entities/lib/xml-entities.js",
+      "./node_modules/loglevel/lib/loglevel.js": "./node_modules/loglevel/lib/loglevel.js",
+      "./node_modules/normalize.css/normalize.css": "./node_modules/normalize.css/normalize.css",
+      "./node_modules/punycode/punycode.js": "./node_modules/punycode/punycode.js",
+      "./node_modules/querystring-es3/decode.js": "./node_modules/querystring-es3/decode.js",
+      "./node_modules/querystring-es3/encode.js": "./node_modules/querystring-es3/encode.js",
+      "./node_modules/querystring-es3/index.js": "./node_modules/querystring-es3/index.js",
+      "./node_modules/react-dom/index.js": "./node_modules/react-dom/index.js",
+      "./node_modules/react-router-dom/es/index.js": "./node_modules/react-router-dom/es/index.js",
+      "./node_modules/react/cjs/react.development.js": "./node_modules/react/cjs/react.development.js",
+      "./node_modules/sockjs-client/dist/sockjs.js": "./node_modules/sockjs-client/dist/sockjs.js",
+      "./node_modules/strip-ansi/index.js": "./node_modules/strip-ansi/index.js",
+      "./node_modules/style-loader/lib/addStyles.js": "./node_modules/style-loader/lib/addStyles.js",
+      "./node_modules/style-loader/lib/urls.js": "./node_modules/style-loader/lib/urls.js",
+      "./node_modules/url/url.js": "./node_modules/url/url.js",
+      "./node_modules/url/util.js": "./node_modules/url/util.js",
+      "./node_modules/webpack-dev-server/client/index.js?http://localhost:8080": "./node_modules/webpack-dev-server/client/index.js?http://localhost:8080",
+      "./node_modules/webpack-dev-server/client/overlay.js": "./node_modules/webpack-dev-server/client/overlay.js",
+      "./node_modules/webpack-dev-server/client/socket.js": "./node_modules/webpack-dev-server/client/socket.js",
+      "./node_modules/webpack/buildin/global.js": "./node_modules/webpack/buildin/global.js",
+      "./node_modules/webpack/buildin/module.js": "./node_modules/webpack/buildin/module.js",
+      "./node_modules/webpack/hot ^\\.\\/log$": "./node_modules/webpack/hot ^\\.\\/log$",
+      "./node_modules/webpack/hot/dev-server.js": "./node_modules/webpack/hot/dev-server.js",
+      "./node_modules/webpack/hot/emitter.js": "./node_modules/webpack/hot/emitter.js",
+      "./node_modules/webpack/hot/log-apply-result.js": "./node_modules/webpack/hot/log-apply-result.js",
+      "./node_modules/webpack/hot/log.js": "./node_modules/webpack/hot/log.js",
+      "./sass/global/main.sass": "./sass/global/main.sass",
+      "./sass/global/temporary.critical.sass": "./sass/global/temporary.critical.sass",
+      "./sass/modules/home.sass": "./sass/modules/home.sass",
+      "./tsx/App.tsx": "./tsx/App.tsx",
+      "./tsx/Home.tsx": "./tsx/Home.tsx",
+      "./tsx/Nav.tsx": "./tsx/Nav.tsx"
+    }
+  },
+  "chunks": {
+    "byName": {
+      "app": 0
+    },
+    "byBlocks": {},
+    "usedIds": {
+      "0": 0
+    }
+  },
+  "prepreHash": "x",
+  "preHash": "248b5c4bd2ea14c63a74",
+  "hash": "d5ea1b6e1e2d811f83a5",
+  "moduleHashs": {
+    "/Users/BrandonSuen/code/Web/site/node_modules/cache-loader/dist/cjs.js??ref--5-0!/Users/BrandonSuen/code/Web/site/node_modules/url-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/image-webpack-loader/index.js??ref--5-2!/Users/BrandonSuen/code/Web/site/img/title-background.jpg": "fb8a1f8617936fdfaaf18c4ed8b39db9",
+    "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/ansi-html/index.js": "d4884b93e1103894ba2bd76274e7786c",
+    "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/ansi-regex/index.js": "2657ef9aa9720fc23f77bab495e49654",
+    "/Users/BrandonSuen/code/Web/site/node_modules/css-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/normalize.css/normalize.css": "7a811942a479adc84824bb5b96217f60",
+    "/Users/BrandonSuen/code/Web/site/node_modules/css-loader/index.js?{\"alias\":{},\"importLoaders\":2}!/Users/BrandonSuen/code/Web/site/node_modules/postcss-loader/lib/index.js?{}!/Users/BrandonSuen/code/Web/site/node_modules/sass-loader/lib/loader.js?{\"includePaths\":[]}!/Users/BrandonSuen/code/Web/site/sass/global/main.sass": "4fd9d406868eb04dd4fd0b2da1a89671",
+    "/Users/BrandonSuen/code/Web/site/node_modules/css-loader/index.js?{\"alias\":{},\"importLoaders\":2}!/Users/BrandonSuen/code/Web/site/node_modules/postcss-loader/lib/index.js?{}!/Users/BrandonSuen/code/Web/site/node_modules/sass-loader/lib/loader.js?{\"includePaths\":[]}!/Users/BrandonSuen/code/Web/site/sass/global/temporary.critical.sass": "bd1f8c944fee0cc520886b00ddc8b5a6",
+    "/Users/BrandonSuen/code/Web/site/node_modules/css-loader/index.js?{\"alias\":{},\"importLoaders\":2}!/Users/BrandonSuen/code/Web/site/node_modules/postcss-loader/lib/index.js?{}!/Users/BrandonSuen/code/Web/site/node_modules/sass-loader/lib/loader.js?{\"includePaths\":[]}!/Users/BrandonSuen/code/Web/site/sass/modules/home.sass": "bfef411058d2012f2f473122f7132413",
+    "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/css-loader/lib/css-base.js": "feee2a24dc85152980dbac6680fe3914",
+    "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/css-loader/lib/url/escape.js": "c90526a0885da476bd5869540efff8b8",
+    "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/events/events.js": "34d1a7bc41dd84ed099787b0d9039451",
+    "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/html-entities/index.js": "ad6f038bca0b35c6ed08f89b5426bdf3",
+    "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/html-entities/lib/html4-entities.js": "1f1aa2cc239c6da2c794ee460304a918",
+    "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/html-entities/lib/html5-entities.js": "754018d2757d028fd520dd2ea4407c16",
+    "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/html-entities/lib/xml-entities.js": "90302dc9c77fbefd285e01b403fb5588",
+    "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/loglevel/lib/loglevel.js": "751c7863585e76552d8ae9b8f6540cfa",
+    "/Users/BrandonSuen/code/Web/site/node_modules/happypack/loader.js??ref--2!/Users/BrandonSuen/code/Web/site/node_modules/normalize.css/normalize.css": "da180b1625a94630a42c5f3fd46033ef",
+    "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/punycode/punycode.js": "4c51eaeb9bba14e029507808945d046d",
+    "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/querystring-es3/decode.js": "d7f2d301c9dae2ea6743ffc4006c3025",
+    "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/querystring-es3/encode.js": "e631267b4ffe9457810086a9a86590ad",
+    "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/querystring-es3/index.js": "23520aa6714cbf7997d5151de7499e76",
+    "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/react-dom/index.js": "c392a2f20881057ecb2a03dfcabde2d4",
+    "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/react-router-dom/es/index.js": "5c89f50fd0080a24b4b1a75eb99f1596",
+    "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/react/cjs/react.development.js": "b5d044689f64bd4f30d11f14e043f52a",
+    "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/sockjs-client/dist/sockjs.js": "26b406cbcce4b8fff3b6595ae9971ae5",
+    "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/strip-ansi/index.js": "ba74b4aef45791b6f28698bad2f69b73",
+    "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/style-loader/lib/addStyles.js": "3571c96d86970489ac5f55215f410cb1",
+    "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/style-loader/lib/urls.js": "40c4fd8e5a535980f7303c6b6b4a3dd6",
+    "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/url/url.js": "1cca585a45321db23844a7652ae51cab",
+    "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/url/util.js": "121bbc8e102fa4bde251bedae3965485",
+    "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/webpack-dev-server/client/index.js?http://localhost:8080": "08c7ec8740628cbd89d824fd80939c11",
+    "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/webpack-dev-server/client/overlay.js": "1a845fc51b5886e4db90d48a9c1218e3",
+    "multi /Users/BrandonSuen/code/Web/site/node_modules/webpack-dev-server/client/index.js?http://localhost:8080 webpack/hot/dev-server normalize.css /Users/BrandonSuen/code/Web/site/sass/global/main.sass /Users/BrandonSuen/code/Web/site/sass/global/temporary.critical.sass /Users/BrandonSuen/code/Web/site/tsx/App.tsx": "a3c6521c8979e5baf2f7e5ce8ef09320",
+    "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/webpack-dev-server/client/socket.js": "b044f06323fb72b383840661875907f4",
+    "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/webpack/buildin/global.js": "d1e175e272092b49d222c5295294ea79",
+    "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/webpack/buildin/module.js": "ced6043a96fedc24ac96526565d3aad8",
+    "/Users/BrandonSuen/code/Web/site/node_modules/webpack/hot nonrecursive /^\\.\\/log$/": "380174cfaa3488a07f5311be985488fc",
+    "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/webpack/hot/dev-server.js": "13e6db4f0fe7df99a168104bd3e53141",
+    "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/webpack/hot/emitter.js": "a15f8d0c89914378c290412102169dad",
+    "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/webpack/hot/log-apply-result.js": "8bd4271d196fb857fffa146a31c0d8f3",
+    "/Users/BrandonSuen/code/Web/site/node_modules/source-map-loader/index.js!/Users/BrandonSuen/code/Web/site/node_modules/webpack/hot/log.js": "2c540262004a4172467be317c8c96047",
+    "/Users/BrandonSuen/code/Web/site/node_modules/happypack/loader.js??ref--4-0!/Users/BrandonSuen/code/Web/site/sass/global/main.sass": "1fe470cea5a6c80129505cb61fbc5bb5",
+    "/Users/BrandonSuen/code/Web/site/node_modules/happypack/loader.js??ref--4-0!/Users/BrandonSuen/code/Web/site/sass/global/temporary.critical.sass": "027dd769f44f89910b38ee14b4051773",
+    "/Users/BrandonSuen/code/Web/site/node_modules/happypack/loader.js??ref--4-0!/Users/BrandonSuen/code/Web/site/sass/modules/home.sass": "9c76e670996033048d3e85400a84786a",
+    "/Users/BrandonSuen/code/Web/site/node_modules/happypack/loader.js??ref--0!/Users/BrandonSuen/code/Web/site/tsx/App.tsx": "59b90efdce4629dd6a339e25049c257d",
+    "/Users/BrandonSuen/code/Web/site/node_modules/happypack/loader.js??ref--0!/Users/BrandonSuen/code/Web/site/tsx/Home.tsx": "043ff6ea9e11675ff05dd3526db73bda",
+    "/Users/BrandonSuen/code/Web/site/node_modules/happypack/loader.js??ref--0!/Users/BrandonSuen/code/Web/site/tsx/Nav.tsx": "d695f6d6865b77fdbaa42dcc37b82dab"
+  },
+  "chunkHashs": {
+    "0": "92348468696da9de7a328ef54a4d2e38"
+  },
+  "chunkModuleIds": {
+    "0": [
+      "./node_modules/webpack/hot/log-apply-result.js",
+      0,
+      "./node_modules/webpack/hot/dev-server.js",
+      "./node_modules/normalize.css/normalize.css",
+      "./sass/global/main.sass",
+      "./sass/global/temporary.critical.sass",
+      "./tsx/App.tsx",
+      "./node_modules/react-router-dom/es/index.js",
+      "./node_modules/react/cjs/react.development.js",
+      "./node_modules/react-dom/index.js",
+      "./tsx/Home.tsx",
+      "./tsx/Nav.tsx",
+      "./sass/modules/home.sass",
+      "./node_modules/css-loader/index.js?{\"alias\":{},\"importLoaders\":2}!./node_modules/postcss-loader/lib/index.js?{}!./node_modules/sass-loader/lib/loader.js?{\"includePaths\":[]}!./sass/modules/home.sass",
+      "./node_modules/style-loader/lib/addStyles.js",
+      "./node_modules/style-loader/lib/urls.js",
+      "./node_modules/css-loader/lib/url/escape.js",
+      "./node_modules/css-loader/lib/css-base.js",
+      "./img/title-background.jpg",
+      "./node_modules/css-loader/index.js?{\"alias\":{},\"importLoaders\":2}!./node_modules/postcss-loader/lib/index.js?{}!./node_modules/sass-loader/lib/loader.js?{\"includePaths\":[]}!./sass/global/temporary.critical.sass",
+      "./node_modules/css-loader/index.js?{\"alias\":{},\"importLoaders\":2}!./node_modules/postcss-loader/lib/index.js?{}!./node_modules/sass-loader/lib/loader.js?{\"includePaths\":[]}!./sass/global/main.sass",
+      "./node_modules/css-loader/index.js!./node_modules/normalize.css/normalize.css",
+      "./node_modules/webpack/hot/log.js",
+      "./node_modules/webpack-dev-server/client/index.js?http://localhost:8080",
+      "./node_modules/webpack/hot/emitter.js",
+      "./node_modules/events/events.js",
+      "./node_modules/url/url.js",
+      "./node_modules/strip-ansi/index.js",
+      "./node_modules/loglevel/lib/loglevel.js",
+      "./node_modules/webpack-dev-server/client/socket.js",
+      "./node_modules/webpack-dev-server/client/overlay.js",
+      "./node_modules/webpack/hot ^\\.\\/log$",
+      "./node_modules/ansi-html/index.js",
+      "./node_modules/html-entities/index.js",
+      "./node_modules/html-entities/lib/xml-entities.js",
+      "./node_modules/html-entities/lib/html4-entities.js",
+      "./node_modules/html-entities/lib/html5-entities.js",
+      "./node_modules/sockjs-client/dist/sockjs.js",
+      "./node_modules/webpack/buildin/global.js",
+      "./node_modules/ansi-regex/index.js",
+      "./node_modules/punycode/punycode.js",
+      "./node_modules/url/util.js",
+      "./node_modules/querystring-es3/index.js",
+      "./node_modules/querystring-es3/decode.js",
+      "./node_modules/querystring-es3/encode.js",
+      "./node_modules/webpack/buildin/module.js"
+    ]
+  }
+}

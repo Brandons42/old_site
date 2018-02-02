@@ -1,9 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Damion')
+
+@keyframes background
+  from
+    background: black
+  to
+    background: url('../../img/title-background.jpg')
+
 .header
+  align-items: center
+  //animation-name: background
   background-image: url('../../img/title-background.jpg')
+  //background-position: 0 5vh
   background-position: center
+  //alter background position with media queries
   background-size: cover
+  display: flex
   height: 100vh
+  justify-content: center
   width: 100vw
 
 .title
-  color: blue
+  color: white
+  font-family: 'Damion', cursive
+  font-size: 100px

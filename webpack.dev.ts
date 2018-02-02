@@ -28,10 +28,7 @@ export default merge(common, {
   entry: {
     app: [
       //'react-hot-loader/patch',
-      path.resolve(__dirname, 'sass/global/main.sass'),
-      path.resolve(__dirname, 'sass/global/temporary.critical.sass'),
       //path.resolve(__dirname, 'tsx/hot/Hot.tsx')
-      path.resolve(__dirname, 'tsx/App.tsx')
     ]
   },
   module: {
@@ -182,5 +179,10 @@ export default merge(common, {
     }),*/
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin()
-  ]
+  ],
+  resolve: {
+    alias: {
+      //react$: path.resolve(process.cwd(), 'node_modules/react/cjs/react.development.js')
+    }
+  }
 });
